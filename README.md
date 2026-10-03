@@ -121,6 +121,10 @@ s-m-r-t change named next to it lands; the proposed issues are not filed yet.
 Found while building this starter; reproductions are in the coordinator
 report for happyvertical/smrt#3367.
 
+- `pnpm typecheck` fails on a fresh checkout (and in CI) with "Cannot find
+  module '@happyvertical/smrt-virt-web'": the `smrt()` plugin writes that
+  module's declaration only while a dev server runs, not during
+  `svelte-kit sync` or `pnpm build`. Run `pnpm dev` once and it passes.
 - `pnpm dev` (`smrt app dev`) binds `localhost`, while `pnpm app:setup` writes
   an invitation for `127.0.0.1`.
 - Signing in does not remove the `smrt app` invitation hand-off files, so
