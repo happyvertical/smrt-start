@@ -1,0 +1,56 @@
+{
+  "name": "@smrt-app/starter",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=26.0.0",
+    "pnpm": "11.25.0"
+  },
+  "scripts": {
+    "dev": "smrt app dev",
+    "build": "smrt app build",
+    "app:setup": "smrt app setup",
+    "app:recover": "smrt app recover",
+    "app:start": "smrt app start",
+    "app:stop": "smrt app stop",
+    "app:doctor": "smrt app doctor",
+    "app:open": "smrt app open",
+    "db:migrate": "smrt app build && smrt app migrate",
+    "typecheck": "svelte-kit sync && tsc --noEmit -p tsconfig.json && svelte-check --tsconfig ./tsconfig.json",
+    "test": "vitest run",
+    "lint": "biome ci ."
+  },
+  "dependencies": {
+    "@happyvertical/ai": "^0.98.0",
+    "@happyvertical/smrt-app-mcp": "^0.53.3",
+    "@happyvertical/smrt-app-runtime": "^0.53.3",
+    "@happyvertical/smrt-chat": "^0.53.3",
+    "@happyvertical/smrt-config": "^0.53.3",
+    "@happyvertical/smrt-core": "^0.53.3",
+    "@happyvertical/smrt-profiles": "^0.53.3",
+    "@happyvertical/smrt-svelte": "^0.53.3",
+    "@happyvertical/smrt-tenancy": "^0.53.3",
+    "@happyvertical/smrt-ui": "^0.53.3",
+    "@happyvertical/smrt-users": "^0.53.3",
+    "@happyvertical/smrt-web": "^0.53.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.3",
+    "@happyvertical/smrt-app-cli": "^0.53.3",
+    "@happyvertical/smrt-cli": "^0.53.3",
+    "@happyvertical/smrt-vitest": "^0.53.3",
+    "@modelcontextprotocol/server": "^2.0.0",
+    "@sveltejs/adapter-node": "^5.5.7",
+    "@sveltejs/kit": "2.70.3",
+    "@sveltejs/vite-plugin-svelte": "^7.3.0",
+    "@types/node": "^24.13.6",
+    "svelte": "^5.57.1",
+    "svelte-check": "^4.7.6",
+    "typescript": "6.0.3",
+    "vite": "8.3.0",
+    "vitest": "4.1.10"
+  }
+}
