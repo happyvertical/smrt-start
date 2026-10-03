@@ -1,4 +1,4 @@
-# smrt starter
+# smrt-start
 
 A small application to fork: one owner, local SQLite, a Notes model, an
 assistant that can read and write your notes, WebMCP tools for browser agents,
@@ -112,7 +112,7 @@ s-m-r-t change named next to it lands; the proposed issues are not filed yet.
 | `src/routes/+layout.svelte` (`createDataSurfaceRegistry()`) | `AssistantDock` requires a registry, and `AppShell` does not share its Provider's | "AppShell: give the dock snippet the Provider's DataSurfaceRegistry (and make AssistantDock's registry optional)" |
 | `smrt.config.ts` (`runtime: { profile: 'local' }`) | `smrt app` fails without it, although the web runtime already defaults to local | "smrt app: default to the local profile when smrt.config declares no runtime" |
 | `smrt.config.ts` (`packages.cli.database`) | `smrt db:migrate` reads the database only from config, not from the `DATABASE_URL` that `smrt app` sets | "smrt db:migrate: honour DATABASE_URL / DATABASE_TYPE from smrt app" |
-| `package.json` `name` (`@smrt-app/starter`) | Must be a scoped name; an unscoped name breaks generated registration at runtime | "Generated isolated registration: accept unscoped app package names" |
+| `package.json` `name` (`@smrt-app/start`) | Must be a scoped name; an unscoped name breaks generated registration at runtime | "Generated isolated registration: accept unscoped app package names" |
 | `vite.config.ts` (`objectsDir`) | The preset scans `src/lib/objects` by default; this app keeps models in `src/lib/models` | Not a gap: an app choice |
 | `svelte.config.js`, `tsconfig.json`, `src/app.html`, `vitest.config.ts`, `biome.json` | SvelteKit, TypeScript, Vitest, and Biome configuration | Not a smrt gap |
 

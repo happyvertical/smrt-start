@@ -6,11 +6,11 @@
   },
   "tracker": {
     "provider": "github",
-    "repository": "happyvertical/smrt-starter"
+    "repository": "happyvertical/smrt-start"
   },
   "forge": {
     "provider": "github",
-    "repository": "happyvertical/smrt-starter"
+    "repository": "happyvertical/smrt-start"
   },
   "labels": {
     "claim": "agent: implementation",
@@ -22,7 +22,7 @@
   },
   "memory": {
     "provider": "hindsight",
-    "bank": "repo-happyvertical-smrt-starter",
+    "bank": "repo-happyvertical-smrt-start",
     "package_tags": []
   },
   "instructions": {

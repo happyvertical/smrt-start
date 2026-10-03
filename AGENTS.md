@@ -1,4 +1,4 @@
-# smrt starter
+# smrt-start
 
 A forkable s-m-r-t application: one owner, local SQLite, a Notes model, an
 in-app assistant, WebMCP for browser agents, and a read-only remote MCP
