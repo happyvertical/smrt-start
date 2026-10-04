@@ -1,7 +1,7 @@
 import { fail, redirect } from '@sveltejs/kit';
 
 import type { Note } from '$lib/models/Note';
-import { getCollection } from '$lib/server/smrt';
+import { runtime } from '$lib/server/smrt';
 import type { Actions, PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ depends, locals }) => {
@@ -10,7 +10,7 @@ export const load: PageServerLoad = async ({ depends, locals }) => {
   if (!locals.permissions.includes('notes.read')) {
     return { notes: [], canCreate: false };
   }
-  const notes = await getCollection<Note>('Note');
+  const notes = await runtime.getCollection<Note>('Note');
   const rows = await notes.list({ orderBy: 'created_at DESC', limit: 100 });
   return {
     notes: rows.map((note) => ({
@@ -32,7 +32,7 @@ export const actions: Actions = {
     const body = String(form.get('body') ?? '').trim();
     if (!title) return fail(400, { error: 'A title is required.' });
 
-    const notes = await getCollection<Note>('Note');
+    const notes = await runtime.getCollection<Note>('Note');
     await notes.create({ title, body });
     return { created: title };
   },
