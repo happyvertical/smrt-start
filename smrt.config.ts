@@ -1,9 +1,8 @@
 import { defineConfig } from '@happyvertical/smrt-config';
 
+// No `runtime` block: the local profile (single owner, SQLite in the OS data
+// directory, loopback only) is the default.
 export default defineConfig({
-  // Single owner, SQLite in the OS data directory, loopback only.
-  runtime: { profile: 'local' },
-
   // s-m-r-t packages whose models this app uses. Their tables are migrated
   // with the app's own (`pnpm db:migrate`).
   consumer: {
@@ -21,13 +20,5 @@ export default defineConfig({
     provider: 'anthropic',
     model: 'claude-sonnet-5-5',
     apiKeyEnv: 'ANTHROPIC_API_KEY',
-  },
-
-  // `smrt app setup` / `smrt app migrate` set DATABASE_URL to the local data
-  // path; `smrt db:migrate` reads it only from here.
-  packages: {
-    cli: {
-      database: { type: 'sqlite', url: process.env.DATABASE_URL },
-    },
   },
 });
