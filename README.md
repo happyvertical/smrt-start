@@ -95,49 +95,50 @@ are gitignored).
 ## What this template still carries
 
 These files (or parts of files) are not about notes. Each stays until the
-s-m-r-t change named next to it lands; the proposed issues are not filed yet.
+s-m-r-t issue named next to it ships; most are fixed on the
+`release/starter-gaps` branch of happyvertical/smrt and leave with the next
+release.
 
-| File | Why it is here | Removed by (proposed smrt issue) |
+| File | Why it is here | Removed by |
 | --- | --- | --- |
-| `src/lib/server/smrt.ts` | Creates the runtime, passes the `smrt app` writer lease, imports the generated registration, and exports the `getCollection` that generated `/api/*` routes import | "Generated SvelteKit routes resolve collections without an app-authored `getCollection`"; "createSmrtSvelteKitRuntime holds the `smrt app` writer lease by default in the local profile"; "Load generated registration without an app import" |
+| `src/lib/server/smrt.ts` | Creates the runtime, passes the `smrt app` writer lease, imports the generated registration, and exports the `getCollection` that generated `/api/*` routes import | happyvertical/smrt#3416 |
 | `src/hooks.server.ts` | Re-exports the runtime's `handle` / `init` | Same as above (once the runtime needs no app module, this is one generated line) |
-| `src/app.d.ts` | Types `App.Locals` as the runtime's locals | "smrt() preset: emit the `App.Locals` declaration" |
-| `src/routes/+layout.server.ts` | Mounts `createSessionLayoutLoad()` | "smrt() preset: mount the standard runtime routes (session load, setup, settings, health, diagnostics)" |
+| `src/app.d.ts` | Types `App.Locals` as the runtime's locals | Not filed: a two-line file; revisit with happyvertical/smrt#3378 |
+| `src/routes/+layout.server.ts` | Mounts `createSessionLayoutLoad()` | happyvertical/smrt#3378 (`smrt add`, mount by default) |
 | `src/routes/setup/+page.svelte`, `+page.server.ts` | Mounts the owner-setup form and action | Same as above |
 | `src/routes/settings/+page.svelte` | Mounts `ShellSettingsPage` | Same as above |
 | `src/routes/api/_runtime/health/+server.ts`, `diagnostics/+server.ts` | Mount the health and diagnostics handlers | Same as above |
-| `src/lib/server/mcp.ts`, `src/routes/.well-known/oauth-protected-resource/mcp/+server.ts` | Hosted-MCP bearer plumbing. In the local profile it is inert (`null` / 404); a hosted deployment would still need an app-written `resolvePrincipal` | "Hosted MCP: ship a default membership-backed `resolvePrincipal` and mount the protected-resource route with `mountMcpAppRoute`" |
-| `src/routes/mcp/+server.ts` (`smrtOptions`, `bindPrincipal`, `auth` lines) | Wires the route to the runtime by hand | "mountMcpAppRoute: take the SMRT runtime instead of `smrtOptions` / `bindPrincipal` / `auth`" |
-| `src/routes/api/assistant/[...path]/+server.ts` (`ai`, `db`, `tools` lines, top-level `await`) | Builds the AI client from the `ai` block, passes a database resolved at import time, and repeats `allowedTools` as a manifest tool catalog | "mountAssistantRoutes: default `ai` to the smrt.config `ai` block, take `db` per request (or the runtime), and offer the manifest tools named in `allowedTools`" |
-| `src/routes/+layout.svelte` (`createDataSurfaceRegistry()`) | `AssistantDock` requires a registry, and `AppShell` does not share its Provider's | "AppShell: give the dock snippet the Provider's DataSurfaceRegistry (and make AssistantDock's registry optional)" |
-| `smrt.config.ts` (`runtime: { profile: 'local' }`) | `smrt app` fails without it, although the web runtime already defaults to local | "smrt app: default to the local profile when smrt.config declares no runtime" |
-| `smrt.config.ts` (`packages.cli.database`) | `smrt db:migrate` reads the database only from config, not from the `DATABASE_URL` that `smrt app` sets | "smrt db:migrate: honour DATABASE_URL / DATABASE_TYPE from smrt app" |
-| `package.json` `name` (`@smrt-app/start`) | Must be a scoped name; an unscoped name breaks generated registration at runtime | "Generated isolated registration: accept unscoped app package names" |
+| `src/lib/server/mcp.ts`, `src/routes/.well-known/oauth-protected-resource/mcp/+server.ts` | Hosted-MCP bearer plumbing. In the local profile it is inert (`null` / 404); a hosted deployment would still need an app-written `resolvePrincipal` | happyvertical/smrt#3413 (`createHostedMcpResourceAuth({ profile, runtime })`) |
+| `src/routes/mcp/+server.ts` (`smrtOptions`, `bindPrincipal`, `auth` lines) | Wires the route to the runtime by hand | happyvertical/smrt#3413 |
+| `src/routes/api/assistant/[...path]/+server.ts` (`ai`, `db`, `tools` lines, top-level `await`) | Builds the AI client from the `ai` block, passes a database resolved at import time, and repeats `allowedTools` as a manifest tool catalog | happyvertical/smrt#3414 |
+| `src/routes/+layout.svelte` (`createDataSurfaceRegistry()`) | `AssistantDock` requires a registry, and `AppShell` does not share its Provider's | happyvertical/smrt#3415 |
+| `smrt.config.ts` (`runtime: { profile: 'local' }`) | `smrt app` fails without it, although the web runtime already defaults to local | happyvertical/smrt#3410 |
+| `smrt.config.ts` (`packages.cli.database`) | `smrt db:migrate` reads the database only from config, not from the `DATABASE_URL` that `smrt app` sets | happyvertical/smrt#3410 |
+| `package.json` `name` (`@smrt-app/start`) | Must be a scoped name; an unscoped name breaks generated registration at runtime | Stays: happyvertical/smrt#3408 makes the scoped-name rule explicit and fails early instead |
 | `vite.config.ts` (`objectsDir`) | The preset scans `src/lib/objects` by default; this app keeps models in `src/lib/models` | Not a gap: an app choice |
 | `svelte.config.js`, `tsconfig.json`, `src/app.html`, `vitest.config.ts`, `biome.json` | SvelteKit, TypeScript, Vitest, and Biome configuration | Not a smrt gap |
 
 ## Framework gaps
 
-Found while building this starter; reproductions are in the coordinator
-report for happyvertical/smrt#3367.
+Found while building this starter against s-m-r-t 0.53.3; tracked under
+happyvertical/smrt#3367. Fixed in 0.53.4: `pnpm typecheck` on a fresh
+checkout (happyvertical/smrt#3409). Fixed on the next release:
 
-- `pnpm typecheck` fails on a fresh checkout (and in CI) with "Cannot find
-  module '@happyvertical/smrt-virt-web'": the `smrt()` plugin writes that
-  module's declaration only while a dev server runs, not during
-  `svelte-kit sync` or `pnpm build`. Run `pnpm dev` once and it passes.
 - `pnpm dev` (`smrt app dev`) binds `localhost`, while `pnpm app:setup` writes
-  an invitation for `127.0.0.1`.
+  an invitation for `127.0.0.1` (happyvertical/smrt#3410).
 - Signing in does not remove the `smrt app` invitation hand-off files, so
-  `pnpm app:open` keeps a dead invitation around.
+  `pnpm app:open` keeps a dead invitation around (happyvertical/smrt#3411).
 - The generated WebMCP `note_list` tool fails: the generated REST list route
   answers `{ items, … }` and the browser client accepts only an array or
-  `{ data }`. `note_get` works.
+  `{ data }`. `note_get` works (happyvertical/smrt#3412).
 - No local credential for MCP clients: in the local profile `/mcp` accepts
   only the browser session cookie, the runtime issues no bearer tokens, and
-  the `smrt-mcp-bridge` stdio bridge sends only a bearer token. The bridge
-  binary also cannot target `/mcp` (it always uses `/api/mcp`).
-- Reaching the app from ChatGPT needs a hosted profile with public OAuth; this
-  template is local-only.
+  the `smrt-mcp-bridge` stdio bridge sends only a bearer token and cannot
+  target `/mcp` (happyvertical/smrt#3413 adds `smrt app token` and a bridge
+  endpoint option).
+
+Still open: reaching the app from ChatGPT needs a hosted profile with public
+OAuth; this template is local-only.
 
 ## License
 

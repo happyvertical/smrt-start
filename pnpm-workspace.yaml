@@ -1,23 +1,37 @@
 allowBuilds:
   esbuild: true
   protobufjs: true
-
-# DEV ONLY — remove when 0.53.3 is published
-# Links the s-m-r-t packages to a local, built smrt checkout at ../smrt-linked
-# until the release that carries the starter's APIs is on the registry.
-overrides:
-  '@happyvertical/smrt-app-cli': 'link:../smrt-linked/packages/app-cli'
-  '@happyvertical/smrt-app-mcp': 'link:../smrt-linked/packages/smrt-app-mcp'
-  '@happyvertical/smrt-app-runtime': 'link:../smrt-linked/packages/app-runtime'
-  '@happyvertical/smrt-chat': 'link:../smrt-linked/packages/chat'
-  '@happyvertical/smrt-cli': 'link:../smrt-linked/packages/cli'
-  '@happyvertical/smrt-config': 'link:../smrt-linked/packages/config'
-  '@happyvertical/smrt-core': 'link:../smrt-linked/packages/core'
-  '@happyvertical/smrt-profiles': 'link:../smrt-linked/packages/profiles'
-  '@happyvertical/smrt-svelte': 'link:../smrt-linked/packages/smrt-svelte'
-  '@happyvertical/smrt-tenancy': 'link:../smrt-linked/packages/tenancy'
-  '@happyvertical/smrt-ui': 'link:../smrt-linked/packages/smrt-ui'
-  '@happyvertical/smrt-users': 'link:../smrt-linked/packages/users'
-  '@happyvertical/smrt-vitest': 'link:../smrt-linked/packages/vitest'
-  '@happyvertical/smrt-web': 'link:../smrt-linked/packages/smrt-web'
-# END DEV ONLY
+minimumReleaseAgeExclude:
+  - '@happyvertical/smrt-agents@0.53.4'
+  - '@happyvertical/smrt-app-cli@0.53.4'
+  - '@happyvertical/smrt-app-mcp@0.53.4'
+  - '@happyvertical/smrt-app-runtime@0.53.4'
+  - '@happyvertical/smrt-assets@0.53.4'
+  - '@happyvertical/smrt-chat@0.53.4'
+  - '@happyvertical/smrt-cli@0.53.4'
+  - '@happyvertical/smrt-config@0.53.4'
+  - '@happyvertical/smrt-core@0.53.4'
+  - '@happyvertical/smrt-dev-mcp@0.53.4'
+  - '@happyvertical/smrt-features@0.53.4'
+  - '@happyvertical/smrt-jobs@0.53.4'
+  - '@happyvertical/smrt-languages@0.53.4'
+  - '@happyvertical/smrt-ledgers@0.53.4'
+  - '@happyvertical/smrt-mcp-apps@0.53.4'
+  - '@happyvertical/smrt-messages@0.53.4'
+  - '@happyvertical/smrt-mobile-contract@0.53.4'
+  - '@happyvertical/smrt-personas@0.53.4'
+  - '@happyvertical/smrt-playbooks@0.53.4'
+  - '@happyvertical/smrt-playground@0.53.4'
+  - '@happyvertical/smrt-profiles@0.53.4'
+  - '@happyvertical/smrt-prompts@0.53.4'
+  - '@happyvertical/smrt-reports@0.53.4'
+  - '@happyvertical/smrt-scanner@0.53.4'
+  - '@happyvertical/smrt-secrets@0.53.4'
+  - '@happyvertical/smrt-svelte@0.53.4'
+  - '@happyvertical/smrt-tags@0.53.4'
+  - '@happyvertical/smrt-tenancy@0.53.4'
+  - '@happyvertical/smrt-types@0.53.4'
+  - '@happyvertical/smrt-ui@0.53.4'
+  - '@happyvertical/smrt-users@0.53.4'
+  - '@happyvertical/smrt-vitest@0.53.4'
+  - '@happyvertical/smrt-web@0.53.4'
