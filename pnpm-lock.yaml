@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@happyvertical/ai':
-        specifier: ^0.98.0
-        version: 0.98.0(ws@8.22.0)(zod@4.6.5)
       '@happyvertical/smrt-app-mcp':
         specifier: ^0.53.5
         version: 0.53.5(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
@@ -35,15 +32,9 @@ importers:
       '@happyvertical/smrt-tenancy':
         specifier: ^0.53.5
         version: 0.53.5(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-ui':
-        specifier: ^0.53.5
-        version: 0.53.5(svelte@5.57.1)
       '@happyvertical/smrt-users':
         specifier: ^0.53.5
         version: 0.53.5(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-web':
-        specifier: ^0.53.5
-        version: 0.53.5(typescript@6.0.3)
     devDependencies:
       '@biomejs/biome':
         specifier: 2.5.3
@@ -584,10 +575,6 @@ packages:
     resolution: {integrity: sha512-LM8XtAaADqgDc0LVtyCt8J0SFQQx2wZiSzZpxfrsnmgh2WAzejlffNypnY2fRMDUntJDaALvaVS2epSgyQyyTA==}
     hasBin: true
 
-  '@happyvertical/ai@0.98.0':
-    resolution: {integrity: sha512-2gOJKs6orm2reAIp8JtUjWyspVQ2Ttma2Xqzk2p+uYygKQlpjsbdRlaADCtW+AmK0p18oJCIMj9HIOtABXRmYQ==}
-    hasBin: true
-
   '@happyvertical/email@0.100.3':
     resolution: {integrity: sha512-aQgkwufANe7S5zF98NXefO5p6xAAo5o5iWgCk1MtkiujkDeu7rO3DXQv8wNeByROw8AaszDSSl4sqK/TiOAdqQ==}
     hasBin: true
@@ -858,10 +845,6 @@ packages:
 
   '@happyvertical/utils@0.100.3':
     resolution: {integrity: sha512-fIktnpH7P3rhkblY/F0xS5Z1+xZPny6op5KCV9i0SoDnBrim51qa+jbEcHhfdQADZ6Ql6022dhMbo3onbTb/Bw==}
-    hasBin: true
-
-  '@happyvertical/utils@0.98.0':
-    resolution: {integrity: sha512-tbcLb4lqVViLvk5aBqY8GKjP13pFUUI51BUQiLmtIid4tuYCj/WlxSHn1vvugJCaiSrExhMQ/ozQazz5GSF+PA==}
     hasBin: true
 
   '@hono/node-server@1.19.17':
@@ -4183,21 +4166,6 @@ snapshots:
       - ws
       - zod
 
-  '@happyvertical/ai@0.98.0(ws@8.22.0)(zod@4.6.5)':
-    dependencies:
-      '@anthropic-ai/sdk': 0.90.0(zod@4.6.5)
-      '@aws-sdk/client-bedrock-runtime': 3.1034.0
-      '@google/genai': 1.50.1
-      '@happyvertical/utils': 0.98.0
-      openai: 6.34.0(ws@8.22.0)(zod@4.6.5)
-    transitivePeerDependencies:
-      - '@modelcontextprotocol/sdk'
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-      - ws
-      - zod
-
   '@happyvertical/email@0.100.3':
     dependencies:
       '@happyvertical/logger': 0.100.3
@@ -5025,13 +4993,6 @@ snapshots:
       - utf-8-validate
 
   '@happyvertical/utils@0.100.3':
-    dependencies:
-      '@paralleldrive/cuid2': 3.3.0
-      date-fns: 4.4.0
-      pluralize: 8.0.0
-      uuid: 13.0.2
-
-  '@happyvertical/utils@0.98.0':
     dependencies:
       '@paralleldrive/cuid2': 3.3.0
       date-fns: 4.4.0
