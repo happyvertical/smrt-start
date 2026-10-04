@@ -8,7 +8,6 @@ import {
   ShellDockTool,
   type ShellNavItem,
 } from '@happyvertical/smrt-svelte/workspace';
-import { createDataSurfaceRegistry } from '@happyvertical/smrt-ui/data';
 import { webMcpToolDefinitions } from '@happyvertical/smrt-virt-web';
 import { page } from '$app/state';
 import type { LayoutProps } from './$types';
@@ -21,7 +20,6 @@ const nav: ShellNavItem[] = [
 ];
 
 const transport = createAssistantHttpTransport({ endpoint: '/api/assistant' });
-const surfaces = createDataSurfaceRegistry();
 
 // Browser agents (WebMCP) get the generated read-only Note tools while the
 // owner is signed in.
@@ -44,11 +42,11 @@ const webmcp = $derived(
   {webmcp}
   runtimeDiagnostics={data.session.authenticated}
 >
-  {#snippet dock()}
+  {#snippet dock(registry)}
     {#if data.session.authenticated}
       <ShellDockTool id="assistant" label="Assistant">
         {#snippet render()}
-          <AssistantDock {transport} registry={surfaces} />
+          <AssistantDock {transport} {registry} />
         {/snippet}
       </ShellDockTool>
     {/if}
