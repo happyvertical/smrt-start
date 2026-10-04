@@ -143,7 +143,7 @@ s-m-r-t change named next to it ships, or is marked as staying.
 | `src/routes/settings/+page.svelte` | Mounts `ShellSettingsPage` | Same as above |
 | `src/routes/api/_runtime/health/+server.ts`, `diagnostics/+server.ts` | Mount the health and diagnostics handlers | Same as above |
 | `src/routes/.well-known/oauth-protected-resource/mcp/+server.ts` | RFC 9728 metadata for hosted bearer challenges; 404 in the local profile | Not filed: only a hosted profile uses it; revisit with happyvertical/smrt#3378 |
-| `src/lib/server/mcp.ts` | Awaits the runtime's profile and builds `createHostedMcpResourceAuth({ profile, runtime })`, shared by `/mcp` and the metadata route | Not filed: proposed "mountMcpAppRoute accepts `runtime`" (below) |
+| `src/lib/server/mcp.ts` | Awaits the runtime's profile and builds `createHostedMcpResourceAuth({ profile, runtime })`, shared by `/mcp` and the metadata route | happyvertical/smrt#3491 |
 | `src/routes/mcp/+server.ts` (`smrtOptions`, `auth`, `bindPrincipal` lines) | `mountMcpAppRoute` has no `runtime` option, so the route passes the runtime's database, credential auth, and principal binder separately; `mountAssistantRoutes` takes `runtime` alone | Same as above |
 | `package.json` `name` (`@smrt-app/start`) | Must be a scoped name; an unscoped name breaks generated registration at runtime | Stays: happyvertical/smrt#3408 makes the scoped-name rule explicit and fails early instead |
 | `vite.config.ts` (`objectsDir`) | The preset scans `src/lib/objects` by default; this app keeps models in `src/lib/models` | Not a gap: an app choice |
@@ -171,11 +171,12 @@ Still open on 0.53.5:
   `@happyvertical/smrt-agents:AgentConfig` and as `@smrt-app/start:AgentConfig`,
   and the MCP catalog is built from every registered class before the route's
   `models: [Note]` allow-list is applied. The same failure happens on 0.53.4.
-  The Vitest suite does not see it because it registers only `Note`. Not
-  filed yet.
+  The Vitest suite does not see it because it registers only `Note`.
+  happyvertical/smrt#3490.
 - **The MCP route is wired by hand.** `mountMcpAppRoute` takes `smrtOptions`,
   `auth`, and `bindPrincipal` instead of `runtime`, and `auth` needs the
-  profile awaited at import time (`src/lib/server/mcp.ts`). Not filed yet.
+  profile awaited at import time (`src/lib/server/mcp.ts`).
+  happyvertical/smrt#3491.
 - **ChatGPT** needs a hosted profile with public OAuth; this template is
   local-only.
 
