@@ -21,7 +21,7 @@ are listed at the end, with the issue that would remove each one.
 pnpm install
 cp .env.example .env        # then set ANTHROPIC_API_KEY in .env
 pnpm app:setup              # build, create the local database, issue a one-time owner invitation
-pnpm dev                    # http://localhost:5173
+pnpm dev                    # http://127.0.0.1:5173
 pnpm app:open               # opens the one-time /setup?token=… page in your browser
 ```
 
@@ -29,11 +29,6 @@ On the setup page, enter your name and email. That creates you as the owner,
 signs you in, and takes you to your notes. The invitation works once, only
 from this machine, and expires; if it has expired, run `pnpm app:stop`,
 `pnpm app:recover`, then `pnpm app:open` again.
-
-> **Known issue:** `pnpm dev` listens on `localhost`, but the invitation URL
-> names `127.0.0.1`. On machines where `localhost` resolves to `::1` the page
-> will not load; replace `127.0.0.1` with `localhost` in the address bar. See
-> "Framework gaps" below.
 
 Your data lives in your operating system's application-data directory, never
 in this checkout. `pnpm app:doctor` prints where, plus any problems it finds.
@@ -50,9 +45,50 @@ in this checkout. `pnpm app:doctor` prints where, plus any problems it finds.
   read-only `note_list` and `note_get` tools with browsers that support
   WebMCP.
 - **MCP clients.** `POST /mcp` serves the read-only Note tools to a caller
-  that holds `notes.read`. Locally that caller is your signed-in browser
-  session. There is not yet a supported way to give a local MCP client (or
-  ChatGPT) its own credential; see "Framework gaps".
+  that holds `notes.read`: your signed-in browser session, or a local MCP
+  client with a token (next section). Note: on s-m-r-t 0.53.5 its tool list
+  fails with a framework bug; see "Framework gaps".
+
+## Use it from a local MCP client
+
+Mint a token after `pnpm app:setup` (it works while the app is running). The
+token is printed once, in the `token` field; only its hash is stored:
+
+```bash
+pnpm exec smrt app token create --scopes notes.read --label claude-desktop
+pnpm exec smrt app token list            # ids, scopes, expiry; never the token
+pnpm exec smrt app token revoke <id>
+```
+
+Tokens expire after 30 days (`--expires` changes that). Then point the client
+at the `smrt-mcp-bridge` stdio bridge in this checkout, with `pnpm dev` (or
+`pnpm app:start`) running. For Claude Desktop:
+
+```json
+{
+  "mcpServers": {
+    "notes": {
+      "command": "/absolute/path/to/smrt-start/node_modules/.bin/smrt-mcp-bridge",
+      "args": ["--env-prefix=NOTES", "--mcp-path=/mcp"],
+      "env": {
+        "NOTES_SERVER_URL": "http://127.0.0.1:5173",
+        "NOTES_TOKEN": "smrt_mcp_…"
+      }
+    }
+  }
+}
+```
+
+The bridge sends the token only to `NOTES_SERVER_URL`. On `/mcp` a valid token
+acts as you, capped to its scopes and your current permissions; an unknown,
+revoked, or expired token gets `401` and never falls back to a browser
+session.
+
+What works on s-m-r-t 0.53.5: minting, listing, and revoking tokens; the
+bridge's `initialize`; `/mcp` accepting a valid token and refusing a bad one.
+What does not: `tools/list` and `tools/call` answer `Duplicate MCP tool name:
+agentconfig_list` for every caller (the bridge reports `MCP upstream request
+failed`). See "Framework gaps".
 
 ## Use OpenAI instead of Anthropic
 
@@ -95,50 +131,53 @@ are gitignored).
 ## What this template still carries
 
 These files (or parts of files) are not about notes. Each stays until the
-s-m-r-t issue named next to it ships; most are fixed on the
-`release/starter-gaps` branch of happyvertical/smrt and leave with the next
-release.
+s-m-r-t change named next to it ships, or is marked as staying.
 
 | File | Why it is here | Removed by |
 | --- | --- | --- |
-| `src/lib/server/smrt.ts` | Creates the runtime, passes the `smrt app` writer lease, imports the generated registration, and exports the `getCollection` that generated `/api/*` routes import | happyvertical/smrt#3416 |
-| `src/hooks.server.ts` | Re-exports the runtime's `handle` / `init` | Same as above (once the runtime needs no app module, this is one generated line) |
+| `src/lib/server/smrt.ts` | One call, `createSmrtSvelteKitRuntime()`; hooks, pages, mounted routes, and generated `/api/*` routes import its `runtime` | Stays: the module the framework looks for, and where runtime options go |
+| `src/hooks.server.ts` | Re-exports the runtime's `handle` / `init` | Not filed: a two-line file; revisit with happyvertical/smrt#3378 |
 | `src/app.d.ts` | Types `App.Locals` as the runtime's locals | Not filed: a two-line file; revisit with happyvertical/smrt#3378 |
 | `src/routes/+layout.server.ts` | Mounts `createSessionLayoutLoad()` | happyvertical/smrt#3378 (`smrt add`, mount by default) |
 | `src/routes/setup/+page.svelte`, `+page.server.ts` | Mounts the owner-setup form and action | Same as above |
 | `src/routes/settings/+page.svelte` | Mounts `ShellSettingsPage` | Same as above |
 | `src/routes/api/_runtime/health/+server.ts`, `diagnostics/+server.ts` | Mount the health and diagnostics handlers | Same as above |
-| `src/lib/server/mcp.ts`, `src/routes/.well-known/oauth-protected-resource/mcp/+server.ts` | Hosted-MCP bearer plumbing. In the local profile it is inert (`null` / 404); a hosted deployment would still need an app-written `resolvePrincipal` | happyvertical/smrt#3413 (`createHostedMcpResourceAuth({ profile, runtime })`) |
-| `src/routes/mcp/+server.ts` (`smrtOptions`, `bindPrincipal`, `auth` lines) | Wires the route to the runtime by hand | happyvertical/smrt#3413 |
-| `src/routes/api/assistant/[...path]/+server.ts` (`ai`, `db`, `tools` lines, top-level `await`) | Builds the AI client from the `ai` block, passes a database resolved at import time, and repeats `allowedTools` as a manifest tool catalog | happyvertical/smrt#3414 |
-| `src/routes/+layout.svelte` (`createDataSurfaceRegistry()`) | `AssistantDock` requires a registry, and `AppShell` does not share its Provider's | happyvertical/smrt#3415 |
-| `smrt.config.ts` (`runtime: { profile: 'local' }`) | `smrt app` fails without it, although the web runtime already defaults to local | happyvertical/smrt#3410 |
-| `smrt.config.ts` (`packages.cli.database`) | `smrt db:migrate` reads the database only from config, not from the `DATABASE_URL` that `smrt app` sets | happyvertical/smrt#3410 |
+| `src/routes/.well-known/oauth-protected-resource/mcp/+server.ts` | RFC 9728 metadata for hosted bearer challenges; 404 in the local profile | Not filed: only a hosted profile uses it; revisit with happyvertical/smrt#3378 |
+| `src/lib/server/mcp.ts` | Awaits the runtime's profile and builds `createHostedMcpResourceAuth({ profile, runtime })`, shared by `/mcp` and the metadata route | Not filed: proposed "mountMcpAppRoute accepts `runtime`" (below) |
+| `src/routes/mcp/+server.ts` (`smrtOptions`, `auth`, `bindPrincipal` lines) | `mountMcpAppRoute` has no `runtime` option, so the route passes the runtime's database, credential auth, and principal binder separately; `mountAssistantRoutes` takes `runtime` alone | Same as above |
 | `package.json` `name` (`@smrt-app/start`) | Must be a scoped name; an unscoped name breaks generated registration at runtime | Stays: happyvertical/smrt#3408 makes the scoped-name rule explicit and fails early instead |
 | `vite.config.ts` (`objectsDir`) | The preset scans `src/lib/objects` by default; this app keeps models in `src/lib/models` | Not a gap: an app choice |
+| `pnpm-workspace.yaml` (`minimumReleaseAgeExclude`) | Lets pnpm install s-m-r-t releases younger than its supply-chain age window | Not a smrt gap: entries can go once the release is older than the window |
 | `svelte.config.js`, `tsconfig.json`, `src/app.html`, `vitest.config.ts`, `biome.json` | SvelteKit, TypeScript, Vitest, and Biome configuration | Not a smrt gap |
 
 ## Framework gaps
 
-Found while building this starter against s-m-r-t 0.53.3; tracked under
-happyvertical/smrt#3367. Fixed in 0.53.4: `pnpm typecheck` on a fresh
-checkout (happyvertical/smrt#3409). Fixed on the next release:
+Tracked under happyvertical/smrt#3367. s-m-r-t 0.53.5 fixed everything the
+earlier versions of this list named: `smrt app dev` binds `127.0.0.1` like the
+invitation URL, and `smrt app` needs no `runtime` or `packages.cli.database`
+config (#3410); signing in removes the invitation hand-off files (#3411); the
+WebMCP `note_list` tool accepts the generated `{ items }` list (#3412); local
+MCP tokens and the bridge's `--mcp-path` (#3413); the assistant mount's
+defaults (#3414); `AppShell`'s dock registry (#3415); and the runtime-only
+`smrt.ts` (#3416).
 
-- `pnpm dev` (`smrt app dev`) binds `localhost`, while `pnpm app:setup` writes
-  an invitation for `127.0.0.1` (happyvertical/smrt#3410).
-- Signing in does not remove the `smrt app` invitation hand-off files, so
-  `pnpm app:open` keeps a dead invitation around (happyvertical/smrt#3411).
-- The generated WebMCP `note_list` tool fails: the generated REST list route
-  answers `{ items, … }` and the browser client accepts only an array or
-  `{ data }`. `note_get` works (happyvertical/smrt#3412).
-- No local credential for MCP clients: in the local profile `/mcp` accepts
-  only the browser session cookie, the runtime issues no bearer tokens, and
-  the `smrt-mcp-bridge` stdio bridge sends only a bearer token and cannot
-  target `/mcp` (happyvertical/smrt#3413 adds `smrt app token` and a bridge
-  endpoint option).
+Still open on 0.53.5:
 
-Still open: reaching the app from ChatGPT needs a hosted profile with public
-OAuth; this template is local-only.
+- **`/mcp` cannot list or call tools.** Every `tools/list` or `tools/call`
+  answers the JSON-RPC error `Duplicate MCP tool name: agentconfig_list`, for
+  the browser session, a local token, and anonymous callers alike, in
+  `pnpm dev` and in the production build. `smrt-agents`' `AgentConfig` (pulled
+  in through `smrt-chat`) is registered twice, as
+  `@happyvertical/smrt-agents:AgentConfig` and as `@smrt-app/start:AgentConfig`,
+  and the MCP catalog is built from every registered class before the route's
+  `models: [Note]` allow-list is applied. The same failure happens on 0.53.4.
+  The Vitest suite does not see it because it registers only `Note`. Not
+  filed yet.
+- **The MCP route is wired by hand.** `mountMcpAppRoute` takes `smrtOptions`,
+  `auth`, and `bindPrincipal` instead of `runtime`, and `auth` needs the
+  profile awaited at import time (`src/lib/server/mcp.ts`). Not filed yet.
+- **ChatGPT** needs a hosted profile with public OAuth; this template is
+  local-only.
 
 ## License
 

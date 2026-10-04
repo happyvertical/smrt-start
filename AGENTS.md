@@ -20,8 +20,11 @@ current in the same change that adds or removes such a file.
 - `src/lib/models/` — `@smrt()` models (the `smrt()` Vite preset scans this
   directory; `vite.config.ts` points it here).
 - `src/lib/server/smrt.ts` — the runtime from
-  `@happyvertical/smrt-app-runtime/sveltekit` and the `getCollection` the
-  generated `/api/*` routes import.
+  `@happyvertical/smrt-app-runtime/sveltekit`, and nothing else. Pages and the
+  generated `/api/*` routes resolve collections per request with
+  `runtime.getCollection()`; never keep the result.
+- `src/lib/server/mcp.ts` — `/mcp` bearer auth (local tokens from
+  `smrt app token`); see README "Framework gaps".
 - `src/routes/` — pages and mounted framework routes (`/setup`, `/settings`,
   `/api/assistant/[...path]`, `/mcp`, `/api/_runtime/*`).
 - Generated and gitignored: `.smrt/`, `src/lib/server/smrt-register.ts`,
@@ -35,7 +38,8 @@ current in the same change that adds or removes such a file.
 - Authorization comes from the signed session (`locals.permissions`); the
   owner role holds the generated `<collection>.<action>` grants.
 - The assistant's `allowedTools` is fail-closed; name every tool explicitly.
-- Remote MCP stays read-only (`effects: ['read']`).
+- Remote MCP stays read-only (`effects: ['read']`); local tokens are minted
+  with the narrowest scope (`--scopes notes.read`).
 - The AI key lives only in the environment variable named by
   `smrt.config.ts` `ai.apiKeyEnv`.
 - Schema changes go through `pnpm db:migrate`; runtime never creates tables.
