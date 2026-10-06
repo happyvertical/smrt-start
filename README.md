@@ -46,8 +46,7 @@ in this checkout. `pnpm app:doctor` prints where, plus any problems it finds.
   WebMCP.
 - **MCP clients.** `POST /mcp` serves the read-only Note tools to a caller
   that holds `notes.read`: your signed-in browser session, or a local MCP
-  client with a token (next section). Note: on s-m-r-t 0.53.5 its tool list
-  fails with a framework bug; see "Framework gaps".
+  client with a token (next section).
 
 ## Use it from a local MCP client
 
@@ -84,11 +83,10 @@ acts as you, capped to its scopes and your current permissions; an unknown,
 revoked, or expired token gets `401` and never falls back to a browser
 session.
 
-What works on s-m-r-t 0.53.5: minting, listing, and revoking tokens; the
-bridge's `initialize`; `/mcp` accepting a valid token and refusing a bad one.
-What does not: `tools/list` and `tools/call` answer `Duplicate MCP tool name:
-agentconfig_list` for every caller (the bridge reports `MCP upstream request
-failed`). See "Framework gaps".
+Through the bridge, a `notes.read` token lists `note_get` and `note_list` and
+can call them, in `pnpm dev` and in the production build. Without a token,
+`tools/list` returns an empty list. A refused token makes every request after
+`initialize` fail with the bridge error `MCP upstream request failed`.
 
 ## Use OpenAI instead of Anthropic
 
@@ -159,20 +157,11 @@ config (#3410); signing in removes the invitation hand-off files (#3411); the
 WebMCP `note_list` tool accepts the generated `{ items }` list (#3412); local
 MCP tokens and the bridge's `--mcp-path` (#3413); the assistant mount's
 defaults (#3414); `AppShell`'s dock registry (#3415); and the runtime-only
-`smrt.ts` (#3416).
+`smrt.ts` (#3416). s-m-r-t 0.54.3 fixed `/mcp` failing every `tools/list` and
+`tools/call` with `Duplicate MCP tool name: agentconfig_list` (#3490).
 
-Still open on 0.53.5:
+Still open on 0.54.3:
 
-- **`/mcp` cannot list or call tools.** Every `tools/list` or `tools/call`
-  answers the JSON-RPC error `Duplicate MCP tool name: agentconfig_list`, for
-  the browser session, a local token, and anonymous callers alike, in
-  `pnpm dev` and in the production build. `smrt-agents`' `AgentConfig` (pulled
-  in through `smrt-chat`) is registered twice, as
-  `@happyvertical/smrt-agents:AgentConfig` and as `@smrt-app/start:AgentConfig`,
-  and the MCP catalog is built from every registered class before the route's
-  `models: [Note]` allow-list is applied. The same failure happens on 0.53.4.
-  The Vitest suite does not see it because it registers only `Note`.
-  happyvertical/smrt#3490.
 - **The MCP route is wired by hand.** `mountMcpAppRoute` takes `smrtOptions`,
   `auth`, and `bindPrincipal` instead of `runtime`, and `auth` needs the
   profile awaited at import time (`src/lib/server/mcp.ts`).
