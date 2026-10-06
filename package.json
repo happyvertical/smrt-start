@@ -24,21 +24,21 @@
     "lint": "biome ci ."
   },
   "dependencies": {
-    "@happyvertical/smrt-app-mcp": "^0.54.3",
-    "@happyvertical/smrt-app-runtime": "^0.54.3",
-    "@happyvertical/smrt-chat": "^0.54.3",
-    "@happyvertical/smrt-config": "^0.54.3",
-    "@happyvertical/smrt-core": "^0.54.3",
-    "@happyvertical/smrt-profiles": "^0.54.3",
-    "@happyvertical/smrt-svelte": "^0.54.3",
-    "@happyvertical/smrt-tenancy": "^0.54.3",
-    "@happyvertical/smrt-users": "^0.54.3"
+    "@happyvertical/smrt-app-mcp": "^0.55.1",
+    "@happyvertical/smrt-app-runtime": "^0.55.1",
+    "@happyvertical/smrt-chat": "^0.55.1",
+    "@happyvertical/smrt-config": "^0.55.1",
+    "@happyvertical/smrt-core": "^0.55.1",
+    "@happyvertical/smrt-profiles": "^0.55.1",
+    "@happyvertical/smrt-svelte": "^0.55.1",
+    "@happyvertical/smrt-tenancy": "^0.55.1",
+    "@happyvertical/smrt-users": "^0.55.1"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.3",
-    "@happyvertical/smrt-app-cli": "^0.54.3",
-    "@happyvertical/smrt-cli": "^0.54.3",
-    "@happyvertical/smrt-vitest": "^0.54.3",
+    "@happyvertical/smrt-app-cli": "^0.55.1",
+    "@happyvertical/smrt-cli": "^0.55.1",
+    "@happyvertical/smrt-vitest": "^0.55.1",
     "@modelcontextprotocol/server": "^2.0.0",
     "@sveltejs/adapter-node": "^5.5.7",
     "@sveltejs/kit": "2.70.3",

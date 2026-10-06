@@ -1,7 +1,6 @@
 import { mountMcpAppRoute } from '@happyvertical/smrt-app-mcp/sveltekit';
 
 import { Note } from '$lib/models/Note';
-import { mcpAuth } from '$lib/server/mcp';
 import { runtime } from '$lib/server/smrt';
 
 /**
@@ -9,10 +8,8 @@ import { runtime } from '$lib/server/smrt';
  * signed-in session, or a client with a token from `smrt app token`).
  */
 export const POST = mountMcpAppRoute({
+  runtime,
   models: [Note],
   requiredScopes: ['notes.read'],
   effects: ['read'],
-  smrtOptions: () => ({ db: runtime.databaseConfig() }),
-  auth: mcpAuth,
-  bindPrincipal: runtime.runAsPrincipal,
 });

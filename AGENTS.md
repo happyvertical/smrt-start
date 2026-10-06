@@ -23,10 +23,10 @@ current in the same change that adds or removes such a file.
   `@happyvertical/smrt-app-runtime/sveltekit`, and nothing else. Pages and the
   generated `/api/*` routes resolve collections per request with
   `runtime.getCollection()`; never keep the result.
-- `src/lib/server/mcp.ts` — `/mcp` bearer auth (local tokens from
-  `smrt app token`); see README "Framework gaps".
 - `src/routes/` — pages and mounted framework routes (`/setup`, `/settings`,
-  `/api/assistant/[...path]`, `/mcp`, `/api/_runtime/*`).
+  `/api/assistant/[...path]`, `/mcp`, `/api/_runtime/*`). `/mcp` and its
+  metadata route take `runtime` and nothing else; local tokens come from
+  `smrt app token`.
 - Generated and gitignored: `.smrt/`, `src/lib/server/smrt-register.ts`,
   `src/lib/types/smrt-generated/`, and the generated `src/routes/api/**`
   routes listed in `.gitignore`'s bounded block. Never edit or commit them.

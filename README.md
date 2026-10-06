@@ -141,8 +141,6 @@ s-m-r-t change named next to it ships, or is marked as staying.
 | `src/routes/settings/+page.svelte` | Mounts `ShellSettingsPage` | Same as above |
 | `src/routes/api/_runtime/health/+server.ts`, `diagnostics/+server.ts` | Mount the health and diagnostics handlers | Same as above |
 | `src/routes/.well-known/oauth-protected-resource/mcp/+server.ts` | RFC 9728 metadata for hosted bearer challenges; 404 in the local profile | Not filed: only a hosted profile uses it; revisit with happyvertical/smrt#3378 |
-| `src/lib/server/mcp.ts` | Awaits the runtime's profile and builds `createHostedMcpResourceAuth({ profile, runtime })`, shared by `/mcp` and the metadata route | happyvertical/smrt#3491 |
-| `src/routes/mcp/+server.ts` (`smrtOptions`, `auth`, `bindPrincipal` lines) | `mountMcpAppRoute` has no `runtime` option, so the route passes the runtime's database, credential auth, and principal binder separately; `mountAssistantRoutes` takes `runtime` alone | Same as above |
 | `package.json` `name` (`@smrt-app/start`) | Must be a scoped name; an unscoped name breaks generated registration at runtime | Stays: happyvertical/smrt#3408 makes the scoped-name rule explicit and fails early instead |
 | `vite.config.ts` (`objectsDir`) | The preset scans `src/lib/objects` by default; this app keeps models in `src/lib/models` | Not a gap: an app choice |
 | `pnpm-workspace.yaml` (`minimumReleaseAgeExclude`) | Lets pnpm install s-m-r-t releases younger than its supply-chain age window | Not a smrt gap: entries can go once the release is older than the window |
@@ -157,15 +155,13 @@ config (#3410); signing in removes the invitation hand-off files (#3411); the
 WebMCP `note_list` tool accepts the generated `{ items }` list (#3412); local
 MCP tokens and the bridge's `--mcp-path` (#3413); the assistant mount's
 defaults (#3414); `AppShell`'s dock registry (#3415); and the runtime-only
-`smrt.ts` (#3416). s-m-r-t 0.54.3 fixed `/mcp` failing every `tools/list` and
-`tools/call` with `Duplicate MCP tool name: agentconfig_list` (#3490).
+`smrt.ts` (#3416). s-m-r-t 0.55.1 fixed `/mcp` failing every `tools/list` and
+`tools/call` with `Duplicate MCP tool name: agentconfig_list` (#3490), and
+0.55.1 lets the MCP routes take the runtime directly, which removed this
+template's last hand-written MCP wiring (#3491).
 
-Still open on 0.54.3:
+Still open on 0.55.1:
 
-- **The MCP route is wired by hand.** `mountMcpAppRoute` takes `smrtOptions`,
-  `auth`, and `bindPrincipal` instead of `runtime`, and `auth` needs the
-  profile awaited at import time (`src/lib/server/mcp.ts`).
-  happyvertical/smrt#3491.
 - **ChatGPT** needs a hosted profile with public OAuth; this template is
   local-only.
 
