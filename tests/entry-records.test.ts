@@ -53,7 +53,7 @@ describe('entry page records', () => {
       status: 'open',
     });
     expect(vi.mocked(fetch).mock.calls.map(([url]) => String(url))).toEqual([
-      '/api/orders?limit=500',
+      '/api/orders?limit=500&offset=0',
       '/api/orders/o1',
     ]);
   });
@@ -104,5 +104,43 @@ describe('entry page records', () => {
     expect(await records?.source.list()).toEqual([
       { id: 'o2', status: 'paid' },
     ]);
+  });
+
+  it('pages through a collection so a keyed entry sees rows past the first page', async () => {
+    const first = Array.from({ length: 500 }, (_, i) => ({
+      id: `a${i}`,
+      status: 'open',
+    }));
+    const fetch = vi.fn(async (url: string | URL | Request) =>
+      String(url).includes('offset=500')
+        ? json({ items: [{ id: 'late', status: 'paid' }] })
+        : json({ items: first }),
+    ) as unknown as typeof globalThis.fetch;
+    const records = entryRecords(
+      definitions,
+      { model: orders.objectRef, filter: { field: 'status', value: 'paid' } },
+      { fetch },
+    );
+    expect(await records?.source.list()).toEqual([
+      { id: 'late', status: 'paid' },
+    ]);
+  });
+
+  it('keeps an edited row inside its keyed entry', async () => {
+    const fetch = vi.fn(async () =>
+      json({ id: 'c1' }),
+    ) as unknown as typeof globalThis.fetch;
+    const records = entryRecords(
+      definitions,
+      {
+        model: customers.objectRef,
+        filter: { field: 'customerType', value: 'dtc' },
+      },
+      { fetch },
+    );
+    await records?.source.update?.('c1', { customerType: 'wholesale' });
+    expect(JSON.parse(String(vi.mocked(fetch).mock.calls[0][1]?.body))).toEqual(
+      { customerType: 'dtc' },
+    );
   });
 });

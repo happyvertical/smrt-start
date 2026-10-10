@@ -18,6 +18,9 @@ export interface RowFilter {
   value: string;
 }
 
+const PAGE_SIZE = 500;
+const MAX_PAGES = 40;
+
 async function read<T>(response: Response): Promise<T> {
   if (!response.ok) {
     throw new Error(`${response.status} ${await response.text()}`.trim());
@@ -48,10 +51,20 @@ export function createRestSource(
 
   const source: RecipeScreensSource = {
     async list() {
-      const body = await read<{ items?: ScreenRecord[] }>(
-        await request(`${base}?limit=500`),
-      );
-      return (body.items ?? []).filter(inScope);
+      // Page through the collection: a keyed entry filters on the client, so
+      // its rows may sit past the first page.
+      const rows: ScreenRecord[] = [];
+      for (let page = 0; page < MAX_PAGES; page += 1) {
+        const body = await read<{ items?: ScreenRecord[] }>(
+          await request(
+            `${base}?limit=${PAGE_SIZE}&offset=${page * PAGE_SIZE}`,
+          ),
+        );
+        const items = body.items ?? [];
+        rows.push(...items.filter(inScope));
+        if (items.length < PAGE_SIZE) break;
+      }
+      return rows;
     },
   };
   if (has('get')) {
@@ -75,7 +88,16 @@ export function createRestSource(
   }
   if (has('update')) {
     source.update = async (id, values) =>
-      read<ScreenRecord>(await request(idOf(id), json(values, 'PUT')));
+      read<ScreenRecord>(
+        await request(
+          idOf(id),
+          // An edit cannot move a row out of its keyed entry.
+          json(
+            filter ? { ...values, [filter.field]: filter.value } : values,
+            'PUT',
+          ),
+        ),
+      );
   }
   if (has('delete')) {
     source.delete = async (id) => {
