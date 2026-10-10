@@ -195,7 +195,7 @@ s-m-r-t change named next to it ships, or is marked as staying.
 | `package.json` `name` (`@smrt-app/start`) | Must be a scoped name; an unscoped name breaks generated registration at runtime | Stays: happyvertical/smrt#3408 makes the scoped-name rule explicit and fails early instead |
 | `vite.config.ts` (`objectsDir`) | The preset scans `src/lib/objects` by default; this app keeps models in `src/lib/models` | Not a gap: an app choice |
 | `pnpm-workspace.yaml` (`minimumReleaseAgeExclude`) | Lets pnpm install s-m-r-t releases younger than its supply-chain age window | Not a smrt gap: entries can go once the release is older than the window |
-| `svelte.config.js`, `tsconfig.json`, `src/app.html`, `vitest.config.ts`, `biome.json` | SvelteKit, TypeScript, Vitest, and Biome configuration | Not a smrt gap |
+| `svelte.config.js`, `tsconfig.json`, `src/app.html`, `vitest.config.ts`, `biome.json` (also leaves `smrt.cookbook.json` unformatted: apply writes it) | SvelteKit, TypeScript, Vitest, and Biome configuration | Not a smrt gap |
 
 ## Framework gaps
 
