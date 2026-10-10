@@ -102,6 +102,53 @@ OPENAI_API_KEY=sk-…
 
 Restart `pnpm dev` after changing `smrt.config.ts`.
 
+## Start from a cookbook
+
+`smrt cookbook apply <cookbook.json> <dir>` creates a new app from this
+template (`--template <path|github:happyvertical/smrt-start[#ref]>`). Apply adds
+the packages the cookbook's recipes need to `dependencies` and writes the
+cookbook, verbatim, to `smrt.cookbook.json` at the project root. Nothing else
+changes, and this app does the rest:
+
+- **Shell.** With a `smrt.cookbook.json`, the app renders through
+  `CookbookApp` (`src/routes/+layout.svelte`): the navigation sections, the
+  section pages (`/s/<section>`), the layout and the theme come from the
+  cookbook. The root layout loads it with `loadCookbookApp`
+  (`src/routes/+layout.server.ts`). A model's entry in the navigation opens
+  `/m/<package>/<Model>` (a keyed entry, such as one status of a model, adds a
+  third segment), which renders `RecipeScreens` for the model's generated web
+  definition. Without a cookbook, nothing changes: the Notes app above.
+- **Packages.** `smrt.config.ts` builds `consumer.packages` from `package.json`:
+  every `@happyvertical/smrt-*` dependency that publishes a manifest. Applying
+  a cookbook adds dependencies, so its models and migrations are built and
+  applied by `pnpm app:setup` / `pnpm db:migrate` without editing the config.
+  Tooling and UI packages publish no manifest and are skipped.
+- **Notes is optional.** `NOTES` in `src/lib/features.ts` is `'auto'` (the
+  default: kept with no cookbook, dropped with one), `'keep'` or `'drop'`.
+  Dropped, `Note` is not scanned or migrated, the Notes tests are skipped, the
+  assistant has no tools, `/mcp` serves none, and `/` opens the cookbook's first
+  section. Kept next to a cookbook, Notes stays on `/` (the shell's title
+  links there). To remove the example for good, delete `Note.ts`, the Notes
+  page and its tests.
+- **Overviews and layout are preferences.** A section page is an editable
+  overview surface (the shell's pencil toggle edits it). Edits are stored per
+  person through smrt-preferences (`_smrt_ui_preferences`, the `overview` and
+  `shell-layout` kinds), never written to the file, laid over the cookbook when
+  the page loads, and validated again on save (`src/lib/server/cookbook.ts`,
+  `POST /api/cookbook/preferences`). `?scope=tenant` stores the organization
+  default instead and needs `overviews.customize` / `shell.customize`; the
+  shell has no control for it yet.
+- **Recipe components.** Recipes can name components and loaders to place in
+  the shell. A bundled app imports them from a fixed map,
+  `src/lib/cookbook/exports.ts`; add a line there when an applied package's
+  recipes ship Svelte exports from a module it does not list.
+- **Demo data.** Nothing is seeded. `demoSeed` in a recipe describes fixtures for
+  browser demos, not records, and has no server-side contract yet.
+
+Try it without publishing anything: `smrt cookbook validate` and `--dry-run`
+print what apply would do, then `pnpm install`, `pnpm app:setup`,
+`pnpm app:doctor` and `pnpm test` run as usual.
+
 ## Change the data model
 
 Edit or add classes in `src/lib/models/`, then run `pnpm db:migrate`. The
@@ -141,6 +188,10 @@ s-m-r-t change named next to it ships, or is marked as staying.
 | `src/routes/settings/+page.svelte` | Mounts `ShellSettingsPage` | Same as above |
 | `src/routes/api/_runtime/health/+server.ts`, `diagnostics/+server.ts` | Mount the health and diagnostics handlers | Same as above |
 | `src/routes/.well-known/oauth-protected-resource/mcp/+server.ts` | RFC 9728 metadata for hosted bearer challenges; 404 in the local profile | Not filed: only a hosted profile uses it; revisit with happyvertical/smrt#3378 |
+| `src/lib/features.ts`, `smrt.config.ts` (`modelPackages`) | The Notes switch, the cookbook file check and the model-package list read from `package.json` | The package list: not filed (smrt-start#4); `consumer.packages` from the dependencies a cookbook adds, or written by `apply` |
+| `src/lib/server/cookbook.ts`, `src/routes/api/cookbook/preferences/+server.ts` | Lays the stored overview and shell-layout preferences over `smrt.cookbook.json` and stores edits | Not filed (smrt-start#4): a smrt-preferences adapter for `CookbookApp`, so the shell persists its own edits |
+| `src/lib/cookbook/exports.ts` | The static map that resolves recipe exports to components | Not a gap: a bundler needs a static list; only the packages the app depends on can be listed |
+| `src/lib/rest-source.ts`, `src/routes/m/[pkg]/[model]/[[key]]/`, `src/routes/s/[slug]/` | The entry and section pages of the cookbook shell | Not filed (smrt-start#4): the entry pages need web definitions and routes for package models, which the build generates only for the app's own models |
 | `package.json` `name` (`@smrt-app/start`) | Must be a scoped name; an unscoped name breaks generated registration at runtime | Stays: happyvertical/smrt#3408 makes the scoped-name rule explicit and fails early instead |
 | `vite.config.ts` (`objectsDir`) | The preset scans `src/lib/objects` by default; this app keeps models in `src/lib/models` | Not a gap: an app choice |
 | `pnpm-workspace.yaml` (`minimumReleaseAgeExclude`) | Lets pnpm install s-m-r-t releases younger than its supply-chain age window | Not a smrt gap: entries can go once the release is older than the window |
@@ -160,7 +211,7 @@ defaults (#3414); `AppShell`'s dock registry (#3415); and the runtime-only
 0.55.1 lets the MCP routes take the runtime directly, which removed this
 template's last hand-written MCP wiring (#3491).
 
-Still open on 0.55.1:
+Still open on 0.55.1 (the cookbook intake needs the unreleased cookbook shell, smrt-svelte `./cookbook`, and `smrt cookbook apply`; see smrt-start#4):
 
 - **ChatGPT** needs a hosted profile with public OAuth; this template is
   local-only.

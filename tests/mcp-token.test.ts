@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
-
+import { notesEnabled } from '../src/lib/features';
 import { POST } from '../src/routes/mcp/+server';
 import { rpc, toolNames } from './mcp-rpc';
 
@@ -35,7 +35,7 @@ vi.mock('../src/lib/server/smrt', () => ({
 const anonymous = { user: null, permissions: [] };
 const bearer = (token: string) => ({ authorization: `Bearer ${token}` });
 
-describe('/mcp with a local token', () => {
+describe.skipIf(!notesEnabled())('/mcp with a local token', () => {
   it('lists only the read tools to a token that may also create notes', async () => {
     expect(
       await toolNames(POST, anonymous, bearer('smrt_mcp_read_and_create_0001')),

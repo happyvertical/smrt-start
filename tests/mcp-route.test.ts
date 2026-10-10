@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-
+import { notesEnabled } from '../src/lib/features';
 import { POST } from '../src/routes/mcp/+server';
 import { rpc, toolNames } from './mcp-rpc';
 
@@ -11,7 +11,7 @@ const owner = {
   permissions: ['notes.create', 'notes.read'],
 };
 
-describe('/mcp', () => {
+describe.skipIf(!notesEnabled())('/mcp', () => {
   it('lists only the read tools, even to a principal that may create notes', async () => {
     expect(await toolNames(POST, owner)).toEqual(['note_get', 'note_list']);
   });
