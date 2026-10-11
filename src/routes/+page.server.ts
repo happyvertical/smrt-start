@@ -1,12 +1,20 @@
 import { fail, redirect } from '@sveltejs/kit';
 
+import { notesEnabled } from '$lib/features';
 import type { Note } from '$lib/models/Note';
+import { homePath } from '$lib/server/cookbook';
 import { runtime } from '$lib/server/smrt';
 import type { Actions, PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async ({ depends, locals }) => {
+export const load: PageServerLoad = async ({ depends, locals, parent }) => {
   depends('app:notes');
   if (!locals.user) redirect(303, '/setup');
+  if (!notesEnabled()) {
+    // Without Notes the home page is the cookbook's first section.
+    const { cookbookApp } = await parent();
+    if (cookbookApp) redirect(303, homePath(cookbookApp));
+    return { notes: [], canCreate: false };
+  }
   if (!locals.permissions.includes('notes.read')) {
     return { notes: [], canCreate: false };
   }
@@ -24,7 +32,11 @@ export const load: PageServerLoad = async ({ depends, locals }) => {
 
 export const actions: Actions = {
   create: async ({ request, locals }) => {
-    if (!locals.user || !locals.permissions.includes('notes.create')) {
+    if (
+      !notesEnabled() ||
+      !locals.user ||
+      !locals.permissions.includes('notes.create')
+    ) {
       return fail(403, { error: 'You cannot create notes.' });
     }
     const form = await request.formData();

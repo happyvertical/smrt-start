@@ -4,6 +4,7 @@ import { enableTenancy, withTenant } from '@happyvertical/smrt-tenancy';
 import { createIsolatedTestDbFromManifest } from '@happyvertical/smrt-vitest';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 
+import { notesEnabled } from '../src/lib/features';
 import type { Note } from '../src/lib/models/Note';
 import '../src/lib/models/Note';
 
@@ -13,16 +14,17 @@ let db: Awaited<ReturnType<typeof createIsolatedTestDbFromManifest>>;
 
 const notes = () => ObjectRegistry.getCollection<Note>('Note', { db: db.db });
 
-beforeAll(async () => {
-  enableTenancy();
-  db = await createIsolatedTestDbFromManifest({ includeObjects: ['Note'] });
-});
+// The Notes example is optional (see src/lib/features.ts).
+describe.skipIf(!notesEnabled())('Note', () => {
+  beforeAll(async () => {
+    enableTenancy();
+    db = await createIsolatedTestDbFromManifest({ includeObjects: ['Note'] });
+  });
 
-afterAll(async () => {
-  await db?.cleanup();
-});
+  afterAll(async () => {
+    await db?.cleanup();
+  });
 
-describe('Note', () => {
   it('creates, reads, and updates a note inside its tenant', async () => {
     const id = await withTenant({ tenantId: tenantA }, async () => {
       const created = await (await notes()).create({

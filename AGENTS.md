@@ -27,6 +27,14 @@ current in the same change that adds or removes such a file.
   `/api/assistant/[...path]`, `/mcp`, `/api/_runtime/*`). `/mcp` and its
   metadata route take `runtime` and nothing else; local tokens come from
   `smrt app token`.
+- `src/lib/features.ts` — what this checkout is composed of: whether
+  `smrt.cookbook.json` exists, whether the Notes example is on (`NOTES`), and
+  the model packages `smrt.config.ts` hands the build. The build configs and
+  the routes read it, so they agree.
+- `src/lib/server/cookbook.ts`, `src/lib/cookbook/exports.ts` — the cookbook
+  shell: load `smrt.cookbook.json`, lay stored preferences over it, store edits.
+  `src/routes/s/[slug]` (section pages) and `src/routes/m/[pkg]/[model]/[[key]]`
+  (entry pages) render inside `CookbookApp` from `+layout.svelte`.
 - Generated and gitignored: `.smrt/`, `src/lib/server/smrt-register.ts`,
   `src/lib/types/smrt-generated/`, and the generated `src/routes/api/**`
   routes listed in `.gitignore`'s bounded block. Never edit or commit them.
@@ -43,6 +51,14 @@ current in the same change that adds or removes such a file.
 - The AI key lives only in the environment variable named by
   `smrt.config.ts` `ai.apiKeyEnv`.
 - Schema changes go through `pnpm db:migrate`; runtime never creates tables.
+- Without `smrt.cookbook.json` the app is the Notes app. With it, Notes is off
+  unless `NOTES` is `'keep'`; guard every Notes-only route, tool and test with
+  `notesEnabled()`.
+- `smrt cookbook apply` only adds dependencies and writes `smrt.cookbook.json`.
+  Anything it would need written elsewhere is derived here from those two
+  (never hand-edit the package list in `smrt.config.ts`).
+- Overview and layout edits are per-person preferences stored through
+  smrt-preferences; the cookbook file is the default and is never written back.
 
 ## Validation
 

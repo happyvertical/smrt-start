@@ -10,7 +10,8 @@
       "src/**/*.{js,ts,svelte}",
       "tests/**/*.ts",
       "*.{js,ts,json}",
-      "!src/lib/server/smrt-register.ts"
+      "!src/lib/server/smrt-register.ts",
+      "!smrt.cookbook.json"
     ]
   },
   "formatter": {

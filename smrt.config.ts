@@ -1,17 +1,16 @@
 import { defineConfig } from '@happyvertical/smrt-config';
 
+import { modelPackages } from './src/lib/features.ts';
+
 // No `runtime` block: the local profile (single owner, SQLite in the OS data
 // directory, loopback only) is the default.
 export default defineConfig({
   // s-m-r-t packages whose models this app uses. Their tables are migrated
-  // with the app's own (`pnpm db:migrate`).
+  // with the app's own (`pnpm db:migrate`). The list is every s-m-r-t
+  // dependency in package.json that publishes models (see `modelPackages`),
+  // so `smrt cookbook apply` extends it by adding dependencies.
   consumer: {
-    packages: [
-      '@happyvertical/smrt-chat',
-      '@happyvertical/smrt-profiles',
-      '@happyvertical/smrt-tenancy',
-      '@happyvertical/smrt-users',
-    ],
+    packages: modelPackages(),
   },
 
   // The assistant's model. The key is read from the named environment

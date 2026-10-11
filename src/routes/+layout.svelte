@@ -4,13 +4,21 @@ import {
   createAssistantHttpTransport,
 } from '@happyvertical/smrt-chat/svelte';
 import { AppShell } from '@happyvertical/smrt-svelte/app';
+import { CookbookApp } from '@happyvertical/smrt-svelte/cookbook';
 import {
   ShellDockTool,
   type ShellNavItem,
 } from '@happyvertical/smrt-svelte/workspace';
+import type { Cookbook } from '@happyvertical/smrt-types';
 import { webMcpToolDefinitions } from '@happyvertical/smrt-virt-web';
+import type { ComponentProps } from 'svelte';
 import { page } from '$app/state';
+import { resolveExport } from '$lib/cookbook/exports';
 import type { LayoutProps } from './$types';
+
+type DockRegistry = Parameters<
+  NonNullable<ComponentProps<typeof AppShell>['dock']>
+>[0];
 
 let { data, children }: LayoutProps = $props();
 
@@ -21,8 +29,8 @@ const nav: ShellNavItem[] = [
 
 const transport = createAssistantHttpTransport({ endpoint: '/api/assistant' });
 
-// Browser agents (WebMCP) get the generated read-only Note tools while the
-// owner is signed in.
+// Browser agents (WebMCP) get the generated read-only tools while the owner is
+// signed in.
 const webmcp = $derived(
   data.session.authenticated
     ? {
@@ -32,24 +40,60 @@ const webmcp = $derived(
       }
     : false,
 );
+
+// The assistant's tools are the Notes tools, so it comes and goes with Notes.
+const assistant = $derived(data.session.authenticated && data.notes);
+
+// The shell builds `/s/<section>/` paths; this app's routes have no trailing slash.
+const withoutTrailingSlash = (path: string) => path.replace(/(.)\/$/, '$1');
+
+// Layout and overview edits are stored as the person's own preferences.
+async function saveEdits(next: Cookbook) {
+  await fetch('/api/cookbook/preferences', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(next),
+  });
+}
 </script>
 
-<AppShell
-  title="smrt starter"
-  {nav}
-  currentHref={page.url.pathname}
-  settingsHref="/settings"
-  {webmcp}
-  runtimeDiagnostics={data.session.authenticated}
->
-  {#snippet dock(registry)}
-    {#if data.session.authenticated}
-      <ShellDockTool id="assistant" label="Assistant">
-        {#snippet render()}
-          <AssistantDock {transport} {registry} />
-        {/snippet}
-      </ShellDockTool>
-    {/if}
-  {/snippet}
-  {@render children()}
-</AppShell>
+{#snippet dock(registry: DockRegistry)}
+  {#if assistant}
+    <ShellDockTool id="assistant" label="Assistant">
+      {#snippet render()}
+        <AssistantDock {transport} {registry} />
+      {/snippet}
+    </ShellDockTool>
+  {/if}
+{/snippet}
+
+{#if data.cookbookApp}
+  <CookbookApp
+    cookbook={data.cookbookApp.cookbook}
+    catalog={data.cookbookApp.catalog}
+    {resolveExport}
+    href={withoutTrailingSlash}
+    title="smrt starter"
+    currentHref={page.url.pathname}
+    settingsHref="/settings"
+    {webmcp}
+    runtimeDiagnostics={data.session.authenticated}
+    layoutEditing={data.session.authenticated}
+    oncookbookchange={data.session.authenticated ? saveEdits : undefined}
+    {dock}
+  >
+    {@render children()}
+  </CookbookApp>
+{:else}
+  <AppShell
+    title="smrt starter"
+    nav={data.notes ? nav : nav.slice(1)}
+    currentHref={page.url.pathname}
+    settingsHref="/settings"
+    {webmcp}
+    runtimeDiagnostics={data.session.authenticated}
+    {dock}
+  >
+    {@render children()}
+  </AppShell>
+{/if}
