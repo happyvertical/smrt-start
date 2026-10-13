@@ -8,4 +8,4 @@ let { data, form }: PageProps = $props();
 
 <svelte:head><title>Set up smrt starter</title></svelte:head>
 
-<OwnerSetupForm {data} {form} {enhance} />
+<OwnerSetupForm {data} {form} {enhance} title="smrt starter" />
