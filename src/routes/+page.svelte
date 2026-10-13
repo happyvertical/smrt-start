@@ -1,105 +1,126 @@
 <script lang="ts">
+import { Form, FormGroup, Input, Textarea } from '@happyvertical/smrt-ui/forms';
+import { EmptyState } from '@happyvertical/smrt-ui/layout';
+import { Button, Card } from '@happyvertical/smrt-ui/ui';
+import type { SubmitFunction } from '@sveltejs/kit';
+import { fromAction } from 'svelte/attachments';
 import { enhance } from '$app/forms';
+import { invalidate } from '$app/navigation';
 import type { PageProps } from './$types';
 
 let { data, form }: PageProps = $props();
+let creating = $state(false);
+let title = $state('');
+let body = $state('');
+let composing = $state(false);
+
+// The form shows once the owner has notes, or after "Start your first note".
+const showForm = $derived(
+  data.canCreate && (data.notes.length > 0 || composing),
+);
+
+const submit: SubmitFunction<
+  Record<string, unknown> | undefined,
+  Record<string, unknown> | undefined
+> = () => {
+  creating = true;
+  return async ({ result, update }) => {
+    try {
+      await update({ invalidateAll: false, reset: false });
+      if (result.type === 'success') {
+        title = '';
+        body = '';
+        await invalidate('app:notes');
+      }
+    } finally {
+      creating = false;
+    }
+  };
+};
 </script>
 
 <svelte:head>
   <title>Notes</title>
 </svelte:head>
 
-<main>
+<main class="page">
   <h1>Notes</h1>
 
-  {#if data.canCreate}
-    <form method="POST" action="?/create" use:enhance>
-      <label>
-        Title
-        <input name="title" required />
-      </label>
-      <label>
-        Body
-        <textarea name="body" rows="4"></textarea>
-      </label>
-      <button type="submit">Add note</button>
-      {#if form?.error}<p role="alert">{form.error}</p>{/if}
-    </form>
-  {/if}
+    {#if showForm}
+      <Card>
+        <Form
+          method="POST"
+          action="?/create"
+          preventDefault={false}
+          {@attach fromAction(enhance, () => submit)}
+        >
+          <FormGroup label="Title" required>
+            <Input name="title" bind:value={title} required />
+          </FormGroup>
+          <FormGroup label="Body">
+            <Textarea name="body" bind:value={body} rows={4} />
+          </FormGroup>
+          {#if form?.error}<p role="alert">{form.error}</p>{/if}
+          <div>
+            <Button type="submit" loading={creating} disabled={creating}>
+              Add note
+            </Button>
+          </div>
+        </Form>
+      </Card>
+    {/if}
 
-  {#if data.notes.length === 0}
-    <p>No notes yet. Add one above, or ask the assistant to write one.</p>
-  {:else}
-    <ul>
-      {#each data.notes as note (note.id)}
-        <li>
-          <h2>{note.title}</h2>
-          {#if note.body}<p>{note.body}</p>{/if}
-        </li>
-      {/each}
-    </ul>
-  {/if}
+    {#if data.notes.length === 0}
+      <EmptyState
+        title="Start your first note"
+        description={data.canCreate
+          ? 'Notes you add show up here for everyone in this workspace.'
+          : 'Notes will show up here once someone adds them.'}
+        actionLabel={data.canCreate && !composing ? 'New note' : undefined}
+        onaction={() => {
+          composing = true;
+        }}
+      />
+    {:else}
+      <ul class="notes">
+        {#each data.notes as note (note.id)}
+          <li>
+            <Card>
+              <h2>{note.title}</h2>
+              {#if note.body}<p>{note.body}</p>{/if}
+            </Card>
+          </li>
+        {/each}
+      </ul>
+    {/if}
 </main>
 
 <style>
-  main {
-    display: grid;
-    gap: var(--smrt-spacing-6);
-    width: min(100%, 48rem);
-    margin-inline: auto;
-    padding: var(--smrt-spacing-6);
-  }
+  @layer smrt.theme {
+    .page {
+      display: grid;
+      gap: var(--smrt-spacing-6);
+      width: min(100%, 48rem);
+      margin-inline: auto;
+      padding: var(--smrt-spacing-6) var(--smrt-spacing-4);
+    }
 
-  form,
-  label {
-    display: grid;
-    gap: var(--smrt-spacing-2);
-  }
+    .notes {
+      display: grid;
+      gap: var(--smrt-spacing-3);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
 
-  input,
-  textarea,
-  button {
-    padding: var(--smrt-spacing-2) var(--smrt-spacing-3);
-    border-radius: var(--smrt-radius-medium);
-    font: inherit;
-  }
+    h1,
+    h2,
+    p {
+      margin: 0;
+    }
 
-  input,
-  textarea {
-    border: 1px solid var(--smrt-color-outline);
-    background: var(--smrt-color-surface);
-    color: var(--smrt-color-on-surface);
-  }
-
-  button {
-    justify-self: start;
-    border: 0;
-    background: var(--smrt-color-primary);
-    color: var(--smrt-color-on-primary);
-    cursor: pointer;
-  }
-
-  ul {
-    display: grid;
-    gap: var(--smrt-spacing-3);
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  li {
-    padding: var(--smrt-spacing-4);
-    border: 1px solid var(--smrt-color-outline-variant);
-    border-radius: var(--smrt-radius-large);
-  }
-
-  h1,
-  h2,
-  li p {
-    margin: 0;
-  }
-
-  h2 {
-    font-size: 1.1rem;
+    h2 {
+      font: var(--smrt-typography-title-medium);
+    }
   }
 </style>

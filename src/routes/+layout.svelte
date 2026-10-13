@@ -3,6 +3,7 @@ import {
   AssistantDock,
   createAssistantHttpTransport,
 } from '@happyvertical/smrt-chat/svelte';
+import type { User } from '@happyvertical/smrt-svelte';
 import { AppShell } from '@happyvertical/smrt-svelte/app';
 import { CookbookApp } from '@happyvertical/smrt-svelte/cookbook';
 import {
@@ -14,6 +15,7 @@ import { webMcpToolDefinitions } from '@happyvertical/smrt-virt-web';
 import type { ComponentProps } from 'svelte';
 import { page } from '$app/state';
 import { resolveExport } from '$lib/cookbook/exports';
+import { signOut } from '$lib/sign-out';
 import type { LayoutProps } from './$types';
 
 type DockRegistry = Parameters<
@@ -23,8 +25,13 @@ type DockRegistry = Parameters<
 let { data, children }: LayoutProps = $props();
 
 const nav: ShellNavItem[] = [
-  { href: '/', label: 'Notes' },
-  { href: '/settings', label: 'Settings' },
+  { href: '/', label: 'Notes', icon: 'book', description: 'Your notes' },
+  {
+    href: '/settings',
+    label: 'Settings',
+    icon: 'settings',
+    description: 'Appearance, account and layout',
+  },
 ];
 
 const transport = createAssistantHttpTransport({ endpoint: '/api/assistant' });
@@ -92,6 +99,12 @@ async function saveEdits(next: Cookbook) {
     settingsHref="/settings"
     {webmcp}
     runtimeDiagnostics={data.session.authenticated}
+    edgeToggles={{ left: true }}
+    config={{ left: { initial: 'expanded' } }}
+    user={data.session.user as unknown as User | null}
+    onSignOut={signOut}
+    phoneTabBar
+    chrome={!page.route.id?.startsWith('/setup')}
     {dock}
   >
     {@render children()}
