@@ -9,54 +9,54 @@ importers:
   .:
     dependencies:
       '@happyvertical/smrt-app-mcp':
-        specifier: ^0.55.18
-        version: 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+        specifier: ^0.55.19
+        version: 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
       '@happyvertical/smrt-app-runtime':
-        specifier: ^0.55.18
-        version: 0.55.18(@happyvertical/speech@0.103.4)(@sveltejs/kit@2.70.3(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.1)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+        specifier: ^0.55.19
+        version: 0.55.19(@happyvertical/speech@0.103.5)(@sveltejs/kit@2.70.3(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.1)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)
       '@happyvertical/smrt-chat':
-        specifier: ^0.55.18
-        version: 0.55.18(@types/node@24.19.1)(debug@4.4.3)(jimp@1.6.1)(sharp@0.35.5(@types/node@24.19.1))(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+        specifier: ^0.55.19
+        version: 0.55.19(@types/node@24.19.1)(debug@4.4.3)(jimp@1.6.1)(sharp@0.35.5(@types/node@24.19.1))(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)
       '@happyvertical/smrt-config':
-        specifier: ^0.55.18
-        version: 0.55.18
+        specifier: ^0.55.19
+        version: 0.55.19
       '@happyvertical/smrt-core':
-        specifier: ^0.55.18
-        version: 0.55.18(ws@8.22.0)(zod@4.6.5)
+        specifier: ^0.55.19
+        version: 0.55.19(ws@8.22.0)(zod@4.6.5)
       '@happyvertical/smrt-preferences':
-        specifier: ^0.55.18
-        version: 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)
+        specifier: ^0.55.19
+        version: 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)
       '@happyvertical/smrt-profiles':
-        specifier: ^0.55.18
-        version: 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+        specifier: ^0.55.19
+        version: 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
       '@happyvertical/smrt-svelte':
-        specifier: ^0.55.18
-        version: 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)
+        specifier: ^0.55.19
+        version: 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)
       '@happyvertical/smrt-tenancy':
-        specifier: ^0.55.18
-        version: 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+        specifier: ^0.55.19
+        version: 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
       '@happyvertical/smrt-types':
-        specifier: ^0.55.18
-        version: 0.55.18
+        specifier: ^0.55.19
+        version: 0.55.19
       '@happyvertical/smrt-ui':
-        specifier: 0.55.18
-        version: 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)
+        specifier: 0.55.19
+        version: 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)
       '@happyvertical/smrt-users':
-        specifier: ^0.55.18
-        version: 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+        specifier: ^0.55.19
+        version: 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)
     devDependencies:
       '@biomejs/biome':
         specifier: 2.5.3
         version: 2.5.3
       '@happyvertical/smrt-app-cli':
-        specifier: ^0.55.18
-        version: 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+        specifier: ^0.55.19
+        version: 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)
       '@happyvertical/smrt-cli':
-        specifier: ^0.55.18
-        version: 0.55.18(@happyvertical/speech@0.103.4)(@sveltejs/kit@2.70.3(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.1)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(hono@4.13.13)(svelte@5.57.1)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))(ws@8.22.0)(zod@4.6.5)
+        specifier: ^0.55.19
+        version: 0.55.19(@happyvertical/speech@0.103.5)(@sveltejs/kit@2.70.3(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.1)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(hono@4.13.13)(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))(ws@8.22.0)(zod@4.6.5)
       '@happyvertical/smrt-vitest':
-        specifier: ^0.55.18
-        version: 0.55.18(@noble/hashes@2.4.0)(@testing-library/dom@10.4.2)(svelte@5.57.1)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))(vitest@4.1.10(@types/node@24.19.1)(jsdom@29.1.1(@noble/hashes@2.4.0))(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(ws@8.22.0)(zod@4.6.5)
+        specifier: ^0.55.19
+        version: 0.55.19(@noble/hashes@2.4.0)(@testing-library/dom@10.4.2)(svelte@5.57.1)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))(vitest@4.1.10(@types/node@24.19.1)(jsdom@29.1.1(@noble/hashes@2.4.0))(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(ws@8.22.0)(zod@4.6.5)
       '@modelcontextprotocol/server':
         specifier: ^2.0.0
         version: 2.3.1
@@ -138,6 +138,10 @@ packages:
     resolution: {integrity: sha512-49igCAONPtL0ZkWWIs/6gWAq3CjWRISbqtFi5ysDljAGaZXMnPigKMly1CuOGlw/zIPaWbIjk2bGhyLtz2AuXg==}
     engines: {node: '>=20.0.0'}
 
+  '@aws-sdk/client-cognito-identity-provider@3.1149.0':
+    resolution: {integrity: sha512-1wpsfnndPU8mmEftUc41funS5rzhAkSTBBD849y3tc14H0EXbT/d6qm0a++czNXcpgebT7ZW+uhn/8mRNwwBoA==}
+    engines: {node: '>=20.0.0'}
+
   '@aws-sdk/client-s3@3.1146.0':
     resolution: {integrity: sha512-WY0YCBzxc4muFfY6UbGpA+oib0nGT/Px2aEPGYX7pp1la2OmDLChnK81mu8H7LdYvwGU1pLAsLIa/qgad0Wd7g==}
     engines: {node: '>=20.0.0'}
@@ -146,36 +150,72 @@ packages:
     resolution: {integrity: sha512-LbY9aGsEiznDWmUc30Nwv3aIX/+dbwTx8KfS0yOC3NPYMO+O91e6jkT1azf34FwjOndq8/Q+RcVVZz5xnerwdg==}
     engines: {node: '>=20.0.0'}
 
+  '@aws-sdk/core@3.978.2':
+    resolution: {integrity: sha512-ViOBLuGSSyPAmkKGJ6KJXtVN7MOEp3rnI7uH+kWxnHccvo8C9cvunEAnN5/oaZH1laQfsTBw7IOnmNkWlFZl2A==}
+    engines: {node: '>=20.0.0'}
+
   '@aws-sdk/credential-provider-env@3.972.72':
     resolution: {integrity: sha512-xTKO/FWJPozTIXbozVnVGoNBhaGba8TBcx+KyUjRVeOlXE+dUc7GTR1cLvu0uTdIdmemzaFbqqCshXeZA1fZew==}
+    engines: {node: '>=20.0.0'}
+
+  '@aws-sdk/credential-provider-env@3.972.73':
+    resolution: {integrity: sha512-PxlFZiF5IPUsPnuVSqjM9jlmRwZhL0xx40ccWfZiLQS8TRnHQpegpK1uAidatWuEqbJtbbY97A2Sezikz2AMUw==}
     engines: {node: '>=20.0.0'}
 
   '@aws-sdk/credential-provider-http@3.972.74':
     resolution: {integrity: sha512-u91E/hT8f4d1xy0Jl7VG4nVKJ3lxbrZkoBTeSVoJdWBiSEUMwMS/9+e0H/aJVQV//Lt5wuzP+E69v4aRSsNTmw==}
     engines: {node: '>=20.0.0'}
 
+  '@aws-sdk/credential-provider-http@3.972.75':
+    resolution: {integrity: sha512-Q/uIDy8eAVN7JgSKDg16F/f+hmNJj/ZyLJN8AkW2ofVdDgJVh8fO/A26iZ7YsvM2/k76hsf/u2lLAtyXsK8Ziw==}
+    engines: {node: '>=20.0.0'}
+
   '@aws-sdk/credential-provider-ini@3.973.17':
     resolution: {integrity: sha512-ged4KXdBkvIC81bLvNHHuQKdKak/VXhQTR1NWYTTqW0474nlmsxy9O/vlgTIohDDWH3xpBdtVMZRyjb+DnocDA==}
+    engines: {node: '>=20.0.0'}
+
+  '@aws-sdk/credential-provider-ini@3.973.18':
+    resolution: {integrity: sha512-KoyjZ9vdjuxEQ8obAH06xKP8H0WKqGhwUZLMqAOiS7G0xgUAht4X8f0ASLC/vhNLCWGblZOD3VQHWyTROGJHLg==}
     engines: {node: '>=20.0.0'}
 
   '@aws-sdk/credential-provider-login@3.972.79':
     resolution: {integrity: sha512-L+Z85anONJd8MaiuraO4wRxATCdEejBZ3K3eymzWI5JPXa9sOS9CkIm72PBKqXKX+Z9p9NGMX5AIMXm0LEflgw==}
     engines: {node: '>=20.0.0'}
 
+  '@aws-sdk/credential-provider-login@3.972.80':
+    resolution: {integrity: sha512-xF9A0gaO7k+1dYPFoo69OQatA9Ov0QuDZfqE8H0FLyIoOph+mlEC+I1Qo9UULupGuDfSYh+kVpfcDSxSYf/2fg==}
+    engines: {node: '>=20.0.0'}
+
   '@aws-sdk/credential-provider-node@3.972.84':
     resolution: {integrity: sha512-oHt854odINVwzwsh+c5x69j0ajm4DbqqqVJ+O1ECsCIZeMDAbzFpXItaqP7UZstJj/ATdTk/KFSH0LaNAgV+kA==}
+    engines: {node: '>=20.0.0'}
+
+  '@aws-sdk/credential-provider-node@3.972.85':
+    resolution: {integrity: sha512-CrFcML/xImiSlquH4W3V6Npz3aSkPXHDVciAU1JOBN0vqjmkcz9H9up2sCHQqN76J/WrT+TJ580L8h2joksQrg==}
     engines: {node: '>=20.0.0'}
 
   '@aws-sdk/credential-provider-process@3.972.72':
     resolution: {integrity: sha512-rLIp2xbMjX/k9/od7APpqq1ZgXXnV0pOL1Th3ZsL8Wu0TRtBsDTVS8iPqcfRFcHakFxPvR04OSTv2ka2qOb/2A==}
     engines: {node: '>=20.0.0'}
 
+  '@aws-sdk/credential-provider-process@3.972.73':
+    resolution: {integrity: sha512-tyNnT4aVuOEXmKKKZPExBi828vRd9heshobBsKF0bov5EORHSJc1AGsHOMRP57sDt+dIuVASUOywaixiX26t4g==}
+    engines: {node: '>=20.0.0'}
+
   '@aws-sdk/credential-provider-sso@3.973.16':
     resolution: {integrity: sha512-IGihaJfFZYacJJr/odqILCoK7W/mvrZ7cuK7ECn3sAu4vLC6u0V8bS7mCGbdugJ8Aum2tnvqmx0F2MRFp2rn9g==}
     engines: {node: '>=20.0.0'}
 
+  '@aws-sdk/credential-provider-sso@3.973.17':
+    resolution: {integrity: sha512-gxKTWaUk2gSbBOH4m3NPRfEKcGXeDAOgHr7nNG5JktR1xZLo0R+DpMjbcleoHbB0uJREOG7hjIRE635IuBWsRQ==}
+    engines: {node: '>=20.0.0'}
+
   '@aws-sdk/credential-provider-web-identity@3.972.78':
     resolution: {integrity: sha512-/y9WvNtlcPBGLR0qc1a+9J/xtYZfVczvLUOuXaVWylzttH7ewsxwHtjmiJSolNrVSDorIxHGHMU61CbonRkmwA==}
+    engines: {node: '>=20.0.0'}
+
+  '@aws-sdk/credential-provider-web-identity@3.972.79':
+    resolution: {integrity: sha512-/jn0Gs/qm6fs6nTIA5yncHayybz42SATZ3rNxCEBYPJ9v69PLrDRgk07E9xTT2gpRcNmDXXbi27ZbuU06N0Z6Q==}
     engines: {node: '>=20.0.0'}
 
   '@aws-sdk/eventstream-handler-node@3.972.35':
@@ -214,6 +254,10 @@ packages:
     resolution: {integrity: sha512-oRxtBcka/JGHGs9l9p9IVajGoTP8vTPmoAzdHGy4Qcy9P5vPnDf6nhIeM/COQNY9k/OahImTRaLkHftoXvfcmQ==}
     engines: {node: '>=20.0.0'}
 
+  '@aws-sdk/nested-clients@3.997.47':
+    resolution: {integrity: sha512-bovCKvDsLocNTzaj6VrrMVJ2BGROqO0JlwcGseO67a+I9Bo+08nUJhSQfZUIx4+A4a7I4101GEJd/AYm7dQ68w==}
+    engines: {node: '>=20.0.0'}
+
   '@aws-sdk/region-config-resolver@3.972.50':
     resolution: {integrity: sha512-qspQXZb0efwK/2/i6RRLRhR4cgCZE40WKgPjcG7AJhG4d1d5xMZTLQdQF0M0Cu1EMRef6QqyCe913FGE8KWZmw==}
     engines: {node: '>=20.0.0'}
@@ -222,12 +266,20 @@ packages:
     resolution: {integrity: sha512-Zk08macMvQTHzQJCLJVkOlviVoqwYMrpXv4lmLN7b7sAbiMoOK7Go0NYdR5UeF+MW8LIbRmwrNy9u/5VvX1U5g==}
     engines: {node: '>=20.0.0'}
 
+  '@aws-sdk/signature-v4-multi-region@3.996.48':
+    resolution: {integrity: sha512-cFDXfEbXaGwbnpvR/DyqfxfjxpjXVRVthQLgkwvcfDS5u3+8G9WSj1X1Ag/pTRg/QOeOno1Tq3ycEdrKsCUcOA==}
+    engines: {node: '>=20.0.0'}
+
   '@aws-sdk/token-providers@3.1034.0':
     resolution: {integrity: sha512-8E+KGcD4ET0H9FXJ2/ZWbfFnQNYEkTZZYJxAs1lkdJlve1AYuqaydInIFfvNgoz5GbYtzbK8/ugsSMu5wPm6kA==}
     engines: {node: '>=20.0.0'}
 
   '@aws-sdk/token-providers@3.1138.0':
     resolution: {integrity: sha512-GpyAr0DD63YOEmYFM6Df+gJuIgC92MMTiBK4FTKfxii5MJ9ge20epR7LyroulscYlG89J+ZB2ivFDPjvfQhzdw==}
+    engines: {node: '>=20.0.0'}
+
+  '@aws-sdk/token-providers@3.1149.0':
+    resolution: {integrity: sha512-CAwYyA8eVk1w6h8YgLvkjIOakWPwURaUFrP7BRVgkxTFUM+O87thyKsGKJ6rVPbP8eoEV10cBWQ5YfaYl3qSVQ==}
     engines: {node: '>=20.0.0'}
 
   '@aws-sdk/types@3.974.6':
@@ -586,8 +638,8 @@ packages:
       '@modelcontextprotocol/sdk':
         optional: true
 
-  '@happyvertical/ai@0.103.4':
-    resolution: {integrity: sha512-zqOu0mBoYwSZfZ2lyoUSsf5exIb+e5OKvPJm/6dT6Ygu4UYUiQicEbejEhAQwisumkbKt62dOHCsiJxSHWo2WA==}
+  '@happyvertical/ai@0.103.5':
+    resolution: {integrity: sha512-cOzdDkjMZkssiuHiRu8olIgt8jQ/0dt9M3T7N6d5qe4IT7b07b2s3BE88m9L54vBMzOOgRjyeDGni4HAG3UfkQ==}
     hasBin: true
     peerDependencies:
       '@mlc-ai/web-llm': '>=0.2.80'
@@ -600,16 +652,20 @@ packages:
     peerDependencies:
       gsap: '>=3.13.0'
 
-  '@happyvertical/email@0.103.4':
-    resolution: {integrity: sha512-GTxvdsumIKTtd9XE7D2VXcbiQbkAPByI89DqvdezpAf0hnvDfwOz/YrQ48tsR7HTxCXU5uVLlgODKr26ZtyYRQ==}
+  '@happyvertical/auth@0.103.5':
+    resolution: {integrity: sha512-HLp8n+tHrJQOpCTt2B0dOta5v5QTwBDFvwldnNGKiNaYa56SQAV9j9jZ9DViFWUD7qzviZ/kwoho3hoznTwQUA==}
     hasBin: true
 
-  '@happyvertical/files@0.103.4':
-    resolution: {integrity: sha512-QbHmoQmb2qc2WKPuayQSoroEiu07+UnVCZvGk4ZBCptzh5tGMsT5G0BNyIRciOcFgckd4qjDqG/7M9MjK+99+g==}
+  '@happyvertical/email@0.103.5':
+    resolution: {integrity: sha512-Tmp0/44ziLo8KLEyW/9yLAJaCgChwJRiL7IiEhkYpIgFMq5QgfIMZ1TywUYOHrZ7sVm7A1uQQgMbYX17q6SiCQ==}
     hasBin: true
 
-  '@happyvertical/images@0.103.4':
-    resolution: {integrity: sha512-zEAEliuyiS1WBOYieVO4BhAv/TH1ZZc2Z4LNgfDxkYktHWxuTzPhZMKel+FpeCGWi6rkRtYGd54k4S5T3/GeVQ==}
+  '@happyvertical/files@0.103.5':
+    resolution: {integrity: sha512-LOW7cPOynRqt7pBvwtvJ20GUklJEcfw/0TdKgRn43ORNVEPaH0LcU6fqW+nCeD93drhN6ITilXyPXrrY5kg8XA==}
+    hasBin: true
+
+  '@happyvertical/images@0.103.5':
+    resolution: {integrity: sha512-8vvdY0TFWXeNYGtCnLHLVI2dUnSLaCV1x62SJlQLqrx7duZX38iqsagjExUHcu5ffYXlQz3XyhisyLbpYixU3g==}
     hasBin: true
     peerDependencies:
       jimp: '>=1.6.1'
@@ -620,8 +676,8 @@ packages:
       sharp:
         optional: true
 
-  '@happyvertical/jobs@0.103.4':
-    resolution: {integrity: sha512-wykkV9nc/7S04E7p0Mlr57His+akXAazPfnPsOe3QPfVbTc5UfgGG3ZOV/xjYUL5WjS65Wm2GAp8NJlPe96HBQ==}
+  '@happyvertical/jobs@0.103.5':
+    resolution: {integrity: sha512-ZDjqeEW8aL+dEQllmK8Pw5Q6vkH45pxLmU5kvFmZdGEwzAAcccluomZkQIIhu8smqnD63YgMDIgdDdKVJ6Qrvw==}
     hasBin: true
     peerDependencies:
       '@aws-sdk/client-sqs': '>=3.1034.0'
@@ -638,11 +694,11 @@ packages:
       bullmq:
         optional: true
 
-  '@happyvertical/json@0.103.4':
-    resolution: {integrity: sha512-qKAEuCTYZ56/1XZwjbiOJdn6xa23LMfyWH1Bm8Vue0ehdsMU2ZjiJ64v+Zc++NW1TAVPAhrsNg3NTU0VYit7mQ==}
+  '@happyvertical/json@0.103.5':
+    resolution: {integrity: sha512-0W4eBz+WK82RLQGdzhphm9pZZW7DgFpzr7Y8bME0C5Xjj+LducyEeicpRzZxfnbYDmbhsLKLKH3EVQ3Sh0L/qg==}
 
-  '@happyvertical/logger@0.103.4':
-    resolution: {integrity: sha512-r58UZ8ilGPUSKha9NqEz7dYMgoNmRydlvxJlKz1cFsU4aZzrnbk6F0hkwJ7tB7x3Jp5ca3PZhBNN9mx76YEClg==}
+  '@happyvertical/logger@0.103.5':
+    resolution: {integrity: sha512-oz3dvL/7lj5vr0bu/IgW4MB1SEMFggbZ3YDhLa95goDJEZIJRRr+FfYyIjUC36EycBRUrFuIKUfATf1yEnarRA==}
     hasBin: true
     peerDependencies:
       '@sentry/node': '>=10.49.0'
@@ -650,31 +706,31 @@ packages:
       '@sentry/node':
         optional: true
 
-  '@happyvertical/messages@0.103.4':
-    resolution: {integrity: sha512-LhHSwWRmj2P0neqYyOA1FfcJmXD0TKckrQKwcOWKgRlwHVRaZEsdWTbZbL8EqFd69ie+Jrw4ZopNS9/DtFXzhA==}
+  '@happyvertical/messages@0.103.5':
+    resolution: {integrity: sha512-X2hn+jds3z/3zI4p7QfdeQtiNeyQIe28LKTGGl5I8RY+FuzX2E5mcTUkuAR8vyFP54zov4Ec/R5UMJkNE3aSlQ==}
 
-  '@happyvertical/secrets@0.103.4':
-    resolution: {integrity: sha512-ql66/qn66JHhBbpVNfzs3ssqAfrLK5X0gCc8OOQOSzGgFqY1Gsl1LgkR17vE4AxMKfZ3wT59W5F9eLaWmVJ6VA==}
+  '@happyvertical/secrets@0.103.5':
+    resolution: {integrity: sha512-4WEnsSRw2nvWz9pjQlxuoKL5i86z5P2v/O+Imjky0T2y7JDCVwes4gRdWa9z3SCwhps5+jzUXrk7mT/h3N27JA==}
     hasBin: true
 
-  '@happyvertical/smrt-agents@0.55.18':
-    resolution: {integrity: sha512-bV2nfsnwp1W4JuHc3BvA3kZp0XXOjAT6PU2w9HcIdGOTNdKTcxO3x2m+MfJdpcIvXLG4sfZAM92AhqyK/JWjzA==}
+  '@happyvertical/smrt-agents@0.55.19':
+    resolution: {integrity: sha512-2wmEZcIZUSnajhUTvxxsArEpO7eBnH6ANvP1UemvYOoyEXAy+Rtd114GUUjdbHD4omILZCiPp0EXqf+8yQVx1Q==}
     peerDependencies:
       svelte: ^5.57.0
     peerDependenciesMeta:
       svelte:
         optional: true
 
-  '@happyvertical/smrt-app-cli@0.55.18':
-    resolution: {integrity: sha512-SB5NI0F6kRnHJXJbdXQmPik9zpsMysjy5JrEptcRL/Ejhdx1SRFecv1Oz7vYmzeGhAhHlpZDzfuJwzBDFRJFpw==}
+  '@happyvertical/smrt-app-cli@0.55.19':
+    resolution: {integrity: sha512-vASTnrWOvgEZoxcMJjZM7O8ggJy4ZwAGs2BmzAPnTyi4RCblDsIiL1K8VRFuUeXc85lJjOHsIKAvLi/sjtqE/Q==}
     engines: {node: '>=26.0.0'}
     hasBin: true
 
-  '@happyvertical/smrt-app-mcp@0.55.18':
-    resolution: {integrity: sha512-MVcqatmyraqMQQUtoEVF1+N65O637BdBGb9x1FJjbsJtEHqzTTmQGQMGvNmFTg7JZoBUYvZ/LXiDKYGXJSkE8A==}
+  '@happyvertical/smrt-app-mcp@0.55.19':
+    resolution: {integrity: sha512-1Qj01zO61v9in9pvgH+2WmRccmsszlh7Xy6zghkoAGihJBsfeasXnqtkAIE6NH4QV0iH2DnkQNpgvDMgytFHgQ==}
 
-  '@happyvertical/smrt-app-runtime@0.55.18':
-    resolution: {integrity: sha512-JlwiJR569DSZNCjwuGxYiaK7t9YGd1t5TxqcC4eAmXKb1o6qmAPZNSJiGQ0vQqYvH6hnj8MSRn6qP9Bqmmyv0g==}
+  '@happyvertical/smrt-app-runtime@0.55.19':
+    resolution: {integrity: sha512-4xTSFjQuE0SgxNRVIDcyMD+H0MryybNNZrpmf2WwiLLnfoQpAJP4ofbZA+Vza8ULd8s5LcSSkDI6FovGbbj1cw==}
     engines: {node: '>=26.0.0'}
     peerDependencies:
       '@sveltejs/kit': ^2.20.0
@@ -682,31 +738,31 @@ packages:
       '@sveltejs/kit':
         optional: true
 
-  '@happyvertical/smrt-assets@0.55.18':
-    resolution: {integrity: sha512-wYW+OU/oYz21KkEYgIGJnPQm0UIshSjdMfyIzAgEJcrSv+vqNCRVo837J6I7G8T//6Wpr6eeM910m3zSo1Hmqw==}
+  '@happyvertical/smrt-assets@0.55.19':
+    resolution: {integrity: sha512-OLqAfi93C2+pvwkpaADaDkwgj5hMAkgxjIyTjZB9ufOD4GD1VoloULyTZXKvfK2FSwjoS9BTP1b07zWzD84LbQ==}
     peerDependencies:
       svelte: ^5.57.0
     peerDependenciesMeta:
       svelte:
         optional: true
 
-  '@happyvertical/smrt-chat@0.55.18':
-    resolution: {integrity: sha512-t12nlgbN5VtxZKihlR7IzF1Y9JiMQg8lLQgdIZfI/mJ09svBp/UN3Ti8e9MWzk/tGjIE8OFSRX18n/rkyRDuvQ==}
+  '@happyvertical/smrt-chat@0.55.19':
+    resolution: {integrity: sha512-/dvINdfExxumpy4hlfXe0xy+lyyn4adxTRkVIwxdZUg/xiEdKQGjTerv4gKN+8/Weu38C1BeQPiVSE8MMSbLiw==}
     peerDependencies:
       svelte: ^5.57.0
     peerDependenciesMeta:
       svelte:
         optional: true
 
-  '@happyvertical/smrt-cli@0.55.18':
-    resolution: {integrity: sha512-F7+P4nZTXpe9/lrBNc+pRh4ViwY8PZnqSfF7nl6rsg+aaypE8oR37VcG1Ii/MQyYlGdgf/uxOSeSxCGWxjfgcQ==}
+  '@happyvertical/smrt-cli@0.55.19':
+    resolution: {integrity: sha512-2glIgeMND/12hoTTGbIOBVytQlxBlz9u+4vUzS+0/Z8r2JO/sVflMDvnjVSraL6FS3vulkyP+6X7VCJDfJemIg==}
     hasBin: true
 
-  '@happyvertical/smrt-config@0.55.18':
-    resolution: {integrity: sha512-cYiBA2nPhQpFueTz/H05GXuC8AALsmkFVZh91lJIWB4nL/zT+X1vycUChCgXdfwkwwvn8J9XKV1nhGZviJ8V8Q==}
+  '@happyvertical/smrt-config@0.55.19':
+    resolution: {integrity: sha512-VeaGM2FgUW5VGtfNVx2pBPOpNWTv5FUKD8SGQ6UQxi2IBLUnjeFRDYb0NqwESW4OKdXKGtOx9mlzkCdE370w+w==}
 
-  '@happyvertical/smrt-core@0.55.18':
-    resolution: {integrity: sha512-GsmKlQE76VQPWuW7rYhZazhvhFbiOxFrQu+MBSfxcL0JGVSY0SarulSBkUCK2W3HpkClQWsgxbiYI3Oz+9aiAg==}
+  '@happyvertical/smrt-core@0.55.19':
+    resolution: {integrity: sha512-OdXV8jPTo1NeyGEtzP21PwMLEpPZ7SIoUdUc32guiOJV+99OTVq7iEQECsrsQXzrPo4j3c79taYpiUOFxKRk+Q==}
     engines: {node: '>=26.0.0'}
     hasBin: true
     peerDependencies:
@@ -718,43 +774,43 @@ packages:
       '@xenova/transformers':
         optional: true
 
-  '@happyvertical/smrt-dev-mcp@0.55.18':
-    resolution: {integrity: sha512-5qN3kLekv8IO9YdPR8Uyo7l/EjTrRoN5+jRhYRNXWNEV3bwiaR2NF9IhyjcJkxU8yf1gTXo+lMY8Ofhzo0JvOQ==}
+  '@happyvertical/smrt-dev-mcp@0.55.19':
+    resolution: {integrity: sha512-osceYxpGAiqmyJA8p7bDa1wbRRV4RkAKB4V8cPtxHPZVoiFUlRGN5qRe4fjseBXsLuqxMaD7qo4Q1z5TghGRzQ==}
     engines: {node: '>=26.0.0'}
     hasBin: true
 
-  '@happyvertical/smrt-features@0.55.18':
-    resolution: {integrity: sha512-fBh7dwULCp3eaMHIWUYiUTyT3wwwtMIZG5FgK2RjKkunLRQ0fmb+yqbfHrxmtjyqFoOtvQ1/58Gkt/nGRRe2ng==}
+  '@happyvertical/smrt-features@0.55.19':
+    resolution: {integrity: sha512-xhQJKgwOdqCQDXmwUtpE5JRKP10XR7j1lXT7363FLYZG+z5qYF7fdyvwqdlA8SLn8NUJL/Evqbw2L+PwBLD5iA==}
     peerDependencies:
       svelte: ^5.57.0
     peerDependenciesMeta:
       svelte:
         optional: true
 
-  '@happyvertical/smrt-images@0.55.18':
-    resolution: {integrity: sha512-IhgMvKfXJg8u4CexH+A82yJCJqs8LwXUuGujiOtWqkM4YgVJN/2AJAFlxYdqJxCQnT+TAW05gAaBBhF2t9AXUg==}
+  '@happyvertical/smrt-images@0.55.19':
+    resolution: {integrity: sha512-iRpeyI+UpxvuYPMPGsx7W0HxVJfLdEYWCJDfKpx+6tDPdmiL3c7IvvtC71/oK707OT/wyMaM84Wk9ljMzBNtnQ==}
     peerDependencies:
       svelte: ^5.57.0
 
-  '@happyvertical/smrt-jobs@0.55.18':
-    resolution: {integrity: sha512-u7hWrv40QpA8LURIlDIHUO/wCwPzjKlGJsJo33Ww76chGERnqjEWNoWNUWYIjXpiKM8nd7Y96NXNjMzcSxizHw==}
+  '@happyvertical/smrt-jobs@0.55.19':
+    resolution: {integrity: sha512-+N7mCnRcYTTTlfGuv8ZS/E8Y3k++a/1pPhGYMge7mXfRzg+cgcCgm33SrEWiUZgOGNJGIgnFJaODpwYHgu0cZg==}
     peerDependencies:
       svelte: ^5.57.0
     peerDependenciesMeta:
       svelte:
         optional: true
 
-  '@happyvertical/smrt-languages@0.55.18':
-    resolution: {integrity: sha512-YgfH0WyrSNdwFLDJUP+5aufG23vznzbnm5W1w+VFMzVHXEf2TUZaz+PanEDcvmAJBlIynZYE3WgCMJHKO8IU1w==}
+  '@happyvertical/smrt-languages@0.55.19':
+    resolution: {integrity: sha512-WT7D5EMZ/3Gp4yN9cBTwAsNXB+Qyp0W0XfqpKWbsW6yjq6H2DDV/LnV42DSi21OlY6jTSpx+m8C4Wkk7Pz6Lrg==}
 
-  '@happyvertical/smrt-ledgers@0.55.18':
-    resolution: {integrity: sha512-7SszHvurBZ5oayYbgfPm1hiJLVgLltw1lpOg7xg+cRG9jW79EgicsjbuOaJQr55R5XdcO4muzhlhCX4QU2nHNw==}
+  '@happyvertical/smrt-ledgers@0.55.19':
+    resolution: {integrity: sha512-A8/KKO4m+jnT3UnesF1Je26rATJNm11xsJSFV1vINYaDPYRAoJl0Fqdd4dN78wERf4EThbkxTU2h0OlScZKwbw==}
 
-  '@happyvertical/smrt-mcp-apps@0.55.18':
-    resolution: {integrity: sha512-6RNTJbJhVOTEuwMhTAUro6fmpT1SAjq40PQUEcgNt2pbTY1QCvHDS9O6/zf7U2d8uoks6o3NywGXvp6fHT8Isg==}
+  '@happyvertical/smrt-mcp-apps@0.55.19':
+    resolution: {integrity: sha512-ZDEV6hhna4elaaQ4sgnYGQc6xjPbRgSrSpIClsLnVVJevu82nthvFUDUJVkBN2iL278QfxqEuCKxIrDLerwjDg==}
 
-  '@happyvertical/smrt-messages@0.55.18':
-    resolution: {integrity: sha512-f2j8uM7PGyzzEdiXqHUppsz4nOZR5yUrG1ahry2LVPCRg2K2AC3Pu2DBhDQEY87jl+qbzBsf9uF2OOW9wQWoaQ==}
+  '@happyvertical/smrt-messages@0.55.19':
+    resolution: {integrity: sha512-0hnfAX0ZzoCyCE4X+YocvfZ/p/eC8mRdI3lRKNXlDvv5738dI4j0cXHjyvGZXH/3z/DGHsT49I54nctXbMv2Jw==}
     peerDependencies:
       '@happyvertical/encryption': '*'
       svelte: ^5.57.0
@@ -764,19 +820,19 @@ packages:
       svelte:
         optional: true
 
-  '@happyvertical/smrt-mobile-contract@0.55.18':
-    resolution: {integrity: sha512-kkRM4vTfL+L53fbIs5iMAx2k4/zPJT0YyC91afQ606Z+SzUHaZ6RIBENGQsImPZuiuvcL56/7yeb2N92GRdQlw==}
+  '@happyvertical/smrt-mobile-contract@0.55.19':
+    resolution: {integrity: sha512-P5PDbJNA2ifkDiTdGfvUtZRqOQIWKVCKQbtTOeMzUvMUqS0o0KM5YYl5kFoRK5ssRorxVkoM2wZx5qw5kCoZVw==}
 
-  '@happyvertical/smrt-personas@0.55.18':
-    resolution: {integrity: sha512-ZmdpF4X4Y+jzYuzLlHYWZpVhp56VvPHfhkqw437XDbQjPqqWgor3ffft51jCF39cLEnd4w+TPs2zNI2vDTKPcQ==}
+  '@happyvertical/smrt-personas@0.55.19':
+    resolution: {integrity: sha512-qSvZFNDFaEhVMFyCDuTsQx5xRMvhFrGm484OpTSmUxtKROqVbWn47xK4YwuX1RSt7N731Uxbx33OPSYdK1PAhg==}
     peerDependencies:
       svelte: ^5.57.0
 
-  '@happyvertical/smrt-playbooks@0.55.18':
-    resolution: {integrity: sha512-g4dNyxwJ63SwqDq95AKKowb1IYVlHWw/hi1DAcb7Yiuw7oCGIYwCHl7QN93rGuhl+AIBpN0eamSwSbQdlJyoKA==}
+  '@happyvertical/smrt-playbooks@0.55.19':
+    resolution: {integrity: sha512-hcRVfs7QVZSvjCtVQm1M20/cx1jeSLN/4hwZIZkSPqwLCHsGKK5sqxDX1J2l79yFbYAZhq7cRe0A589u9hRRHA==}
 
-  '@happyvertical/smrt-playground@0.55.18':
-    resolution: {integrity: sha512-jYlLTo9Z/d9o1Jh/D/nLZVdMVWyr1NutOUmBafvE+5oA4/agEHLuhu5Soj8c9aHXQ5uLSlgIzFTkL36L3j2nXg==}
+  '@happyvertical/smrt-playground@0.55.19':
+    resolution: {integrity: sha512-jrGV0eHyHncE60ZJ5FUXMsAzED1g/s4e30d0CDMFT6l+W/F8iUt001MgvEf1sRGuffrfZo7eA7IRQBOBzcbm4g==}
     peerDependencies:
       svelte: ^5.57.0
       vite: ^7.0.0 || ^8.0.0
@@ -786,32 +842,32 @@ packages:
       vite:
         optional: true
 
-  '@happyvertical/smrt-preferences@0.55.18':
-    resolution: {integrity: sha512-ayRVS4C4xAkozZShhodmciwBF9FoXbYuI0heXZaOMg+BBk2PV7IYKmtJ08+arh9a4Ec2u9TK30jhWhivHeQ0sw==}
+  '@happyvertical/smrt-preferences@0.55.19':
+    resolution: {integrity: sha512-fvHL+XWHO0eyFttJCyyrc9q6nuqHjOwCDtJ55cuFYMjCwFibo0cSqxaQJosGGlYsZs/5gubJZE6jn7fFo+ETIg==}
 
-  '@happyvertical/smrt-profiles@0.55.18':
-    resolution: {integrity: sha512-Yi51yaHEA/F5BRR1OZebgBHQczG6KGSwkiy93F5qAC/LlneX6eFkdTwEsMQxs7yEcvktNswGFtnKieb30Had8g==}
+  '@happyvertical/smrt-profiles@0.55.19':
+    resolution: {integrity: sha512-IvDJlPcDxuYylVjyJxnRdILuBgE76DMgaXLz4xU7UT/ofclBA0NSqi8+7G1iFsSXB6DjBM7fbUCcv3iV6XuV7g==}
 
-  '@happyvertical/smrt-prompts@0.55.18':
-    resolution: {integrity: sha512-kFRZaHi295DpfPZ0PXM2sX82oCRncKJE7wtlo5jqqT8+dJ5YM9fH3E5oy5lXJXD1nntRwTdpFDsbF8p4V2ZKGg==}
+  '@happyvertical/smrt-prompts@0.55.19':
+    resolution: {integrity: sha512-Dve7SO8eTNNLK8pXD6++8FhCZPU8sjgkWmMIdehb8DAdShMYnVDbve2wTMkz+Cek+j1g/N6qBpgGUwX6D7PsXA==}
     peerDependencies:
       svelte: ^5.57.0
     peerDependenciesMeta:
       svelte:
         optional: true
 
-  '@happyvertical/smrt-reports@0.55.18':
-    resolution: {integrity: sha512-DbZcWOv3AOPLaSqySR4clB4aAngtcpp4WO6bct2BPuewK/wuyzpXscdZ2bfnvQyRihQlaY5Pw3DSUWxNOXXAnw==}
+  '@happyvertical/smrt-reports@0.55.19':
+    resolution: {integrity: sha512-oCZDOj2SwZQyZxoDDVdxc+oNoHPwDqwUrXmgJtfk1I+A86rrB4s2343hnyVOYfhaOhpDlwaUMtKJrGfZMkT1AQ==}
 
-  '@happyvertical/smrt-scanner@0.55.18':
-    resolution: {integrity: sha512-hHYjtcJly/wYlgzrCDFel/dqoo6sQoQvqWKb8sXlbyP4wHz8podhnVheNbiAPEjhIbmQiklIUPYviTJsDmowvg==}
+  '@happyvertical/smrt-scanner@0.55.19':
+    resolution: {integrity: sha512-yo6pacEtMFFbxhl/h9K0gkAUhry2y8V5TF5Vp6rv0VxR95DMZEKTq6MZ0lMUf9pPvQCYABcD12AlWAkicxPONg==}
     hasBin: true
 
-  '@happyvertical/smrt-secrets@0.55.18':
-    resolution: {integrity: sha512-DQqcQ6TIMo4Yntn2IGrl4MRKyqPGuQaqHZj25eF9VjHxlfFrVxfStnTCHcz9NzSNHKcsayaOVVdCaT+FUgLkRQ==}
+  '@happyvertical/smrt-secrets@0.55.19':
+    resolution: {integrity: sha512-q6j+KEM6f/poCKJAOH8TnEIxoEUIbV/Z/2trDiJARjhor+jGTVho/PdVhGFa7N16laWUxNEGqcEcZf51//JSlw==}
 
-  '@happyvertical/smrt-svelte@0.55.18':
-    resolution: {integrity: sha512-nDCcLuOpQa83VBZsUdpRCc7FHELDTnTtj6W5yWTU/bDydIHVsRX4cJ3J0ZX5WDyIxC/+jKlNCnyiOmheoFptEg==}
+  '@happyvertical/smrt-svelte@0.55.19':
+    resolution: {integrity: sha512-vXTpNXcI3IKfTsBz4Jce68UuYq6sr7sfFoSs30SEgF/gONcZiu/8SFEjDhSf2Fat9UgjqfWKXLAls5kR8r//ng==}
     peerDependencies:
       '@happyvertical/speech': '>=0.102.5'
       '@huggingface/transformers': '>=4.3.0'
@@ -834,22 +890,22 @@ packages:
       chrono-node:
         optional: true
 
-  '@happyvertical/smrt-tags@0.55.18':
-    resolution: {integrity: sha512-o0BRSDx4CO9Uc2MDpK5h0C21diTUwtErOBN7vvF0R1G84svzEtd2F0Dv0ErxWfkbVTORQ6tnk6q1XRtYNek+9w==}
+  '@happyvertical/smrt-tags@0.55.19':
+    resolution: {integrity: sha512-dUqA0ve6+hcOs9+uIw/1zbnhtk1SBes+UuScAB7VT8rqttU0hrAyczYkYhlQi4l8cMD/dH6xukq/0N5toWSReA==}
 
-  '@happyvertical/smrt-tenancy@0.55.18':
-    resolution: {integrity: sha512-G8vLDmLjS7Ov28rMHRDab55nx57xERVPk58umrfNXSnBOXB89GwaZ7DjhA+39EtLjKk8t/iQzgKz2LNWQfp5IA==}
+  '@happyvertical/smrt-tenancy@0.55.19':
+    resolution: {integrity: sha512-PQvAcGLayknZnRsMrzVUqZWbt4ft9gPfw+1niHgCFTa9IIoYtRcnPMaoaQgAJyQsDdclVLncrsW0rSpRWMhtUw==}
     peerDependencies:
       svelte: ^5.57.0
     peerDependenciesMeta:
       svelte:
         optional: true
 
-  '@happyvertical/smrt-types@0.55.18':
-    resolution: {integrity: sha512-5KXhXdQUr07k56vqbeJpHy/YoTmst/MwhFL4dnUubpFe4+1RVBDW2PdEbPsXQ08/f0GE+gjUUXpUINYzymT11A==}
+  '@happyvertical/smrt-types@0.55.19':
+    resolution: {integrity: sha512-OiSxQFqeaxoeO0K+bK9D4mvy5SaK0tPkCPj9F/4S46xAAH705oGOJzgpoMd+BNxa09PuxhvJQDhHZgjN/x5IDw==}
 
-  '@happyvertical/smrt-ui@0.55.18':
-    resolution: {integrity: sha512-U6/LrVcPKNfP8nSh3gvCcVALj4KPxv6+mxVlUNeaa8zPeT7aA/53ZM1DeU+IP5z42BPdEXYR9YqaGq5ijf1DEg==}
+  '@happyvertical/smrt-ui@0.55.19':
+    resolution: {integrity: sha512-VUNcxQVnk+qC8LptZ4NaRRrLl0umqKySboJRLf/VfsTji7oCwVxTyZJQQuFYJ6Svwx4GsxIALAVe4hEfujTpgw==}
     peerDependencies:
       '@happyvertical/speech': '>=0.102.5'
       svelte: ^5.57.0
@@ -859,16 +915,16 @@ packages:
       svelte:
         optional: true
 
-  '@happyvertical/smrt-users@0.55.18':
-    resolution: {integrity: sha512-8e+60RHBoHtPWAfqsZ+YLtZHlOCiI808EEMnnkFK5pcujvxFQ5xDJ2EBmDrMsc3S4i7GORGcuZnDHnmTo4ThAQ==}
+  '@happyvertical/smrt-users@0.55.19':
+    resolution: {integrity: sha512-FYnSRCG1+z7AzCFllo1oTRxsawYf0wFY51eMXF+W8DoooiD6izsVnD/nV2kWMxQVMhoaqacGXXhO9TX9NaEV6w==}
     peerDependencies:
       svelte: ^5.57.0
     peerDependenciesMeta:
       svelte:
         optional: true
 
-  '@happyvertical/smrt-vitest@0.55.18':
-    resolution: {integrity: sha512-VCuPMnIN/HRqqev4le9I0/6AQjTlrSE82Ng2bsQQO6OXTieQmep/pBH+rozAEYfRGRsQnT+Q6pbfNgj28gNA3A==}
+  '@happyvertical/smrt-vitest@0.55.19':
+    resolution: {integrity: sha512-bqR/hNE97smmLfSic9lz2s8p+Nmn1zadByc4e2panDwlgqu4gqddFFsdgPzyQ1xly6d8HhOasFs9kCSFMO7KMA==}
     peerDependencies:
       svelte: '>=5.57.0'
       vitest: '>=2.1.9'
@@ -876,19 +932,19 @@ packages:
       svelte:
         optional: true
 
-  '@happyvertical/smrt-web@0.55.18':
-    resolution: {integrity: sha512-vpCc2Ucv4ftkXevsD23wgIsAjI39d82jSMpKybMX95c1cT9WF/mqty1a0WEeFydBBcmAL2ICaWHQzeGRK4mpJQ==}
+  '@happyvertical/smrt-web@0.55.19':
+    resolution: {integrity: sha512-2QI5mLL0JEgLCssIWjkgMYNw2fsWfAnzdyAzKmFJ+j9uLM+4LHU9EXU2JssqcIXS/U5w+NN55PfWlkTi46P1VQ==}
 
-  '@happyvertical/speech@0.103.4':
-    resolution: {integrity: sha512-yyjdUbFiRrGJa3fzDDu+0RJzFiPxjRX5jOLy835cIdnnYgc51Sn1aIGwcn+FgspirV+oy/BEWNIJS4FeRPgL7Q==}
+  '@happyvertical/speech@0.103.5':
+    resolution: {integrity: sha512-RXh7rRO6enrZg0wjVqqZPNS7IZwmkXTh55ZuV08i/woBdvC3PPMcoNiqqNmNH2TkS/e83eJulGTOMATtxGwtiA==}
     peerDependencies:
       '@huggingface/transformers': '>=4.0.0'
     peerDependenciesMeta:
       '@huggingface/transformers':
         optional: true
 
-  '@happyvertical/sql@0.103.4':
-    resolution: {integrity: sha512-vluDOXc1O+sGURcTCaR0NUyZfXIapS342DDka4sw/5EQZ2oj4hs7U8yeKPYmsRG0sojUwH+RjFbHEVUUm6alIw==}
+  '@happyvertical/sql@0.103.5':
+    resolution: {integrity: sha512-hmlHPrNrqUpAUVa7SDf5jHmmozl8pnrnXp2y5tKS5j+DESaYnVLLISuaBgxeCNZrve0bHiGyyoEF5g9gZJ2b8A==}
     hasBin: true
     peerDependencies:
       '@electric-sql/pglite': '>=0.5.0 <1'
@@ -902,8 +958,8 @@ packages:
       '@sqliteai/sqlite-vector':
         optional: true
 
-  '@happyvertical/utils@0.103.4':
-    resolution: {integrity: sha512-i2pW4ARX18q+AhvDX2H8F+ESaTsS78Mob9ledHo1tyGzHRFXguAyCOisV5WPVzLYIK3RnUZ9V0Sv2S9PhbRlNQ==}
+  '@happyvertical/utils@0.103.5':
+    resolution: {integrity: sha512-QoEtNTnOrGrDREcHpePoZ0eIcdp39xQiEYIUrHzjBukRGYgl6HKlVR4urOKcNI8dAi7GgQYLkzngJknM/rg/Ig==}
     hasBin: true
 
   '@hono/node-server@1.19.17':
@@ -1317,8 +1373,20 @@ packages:
   '@neon-rs/load@0.0.4':
     resolution: {integrity: sha512-kTPhdZyTQxB+2wpiRcFWrDcejc4JI6tkPuS7UZCG4l6Zvc5kU/gGQ/ozvHTh1XR5tS+UlfAfGuPajjzQjCiHCw==}
 
+  '@noble/ciphers@2.1.1':
+    resolution: {integrity: sha512-bysYuiVfhxNJuldNXlFEitTVdNnYUc+XNJZd7Qm2a5j1vZHgY+fazadNFWFaMK/2vye0JVlxV3gHmC0WDfAOQw==}
+    engines: {node: '>= 20.19.0'}
+
+  '@noble/curves@2.0.1':
+    resolution: {integrity: sha512-vs1Az2OOTBiP4q0pwjW5aF0xp9n4MxVrmkFBxc6EKZc6ddYx5gaZiAsZoq0uRRXWbi3AT/sBqn05eRPtn1JCPw==}
+    engines: {node: '>= 20.19.0'}
+
   '@noble/curves@2.4.0':
     resolution: {integrity: sha512-P4/62zrgfH33CneE3Dn4WhJVA22YUU0eR51wKIan4NVRvwsA0YnPTwWGpNbpuacSujmSFLvyzpyuR30+fbq2Ew==}
+    engines: {node: '>= 20.19.0'}
+
+  '@noble/hashes@2.0.1':
+    resolution: {integrity: sha512-XlOlEbQcE9fmuXxrVTXCTlG2nlRXa9Rj3rr5Ue/+tX+nmkgbX720YHh0VR3hBF9xDvwnb8D2shVGOwNx+ulArw==}
     engines: {node: '>= 20.19.0'}
 
   '@noble/hashes@2.4.0':
@@ -2097,6 +2165,15 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@scure/base@2.0.0':
+    resolution: {integrity: sha512-3E1kpuZginKkek01ovG8krQ0Z44E3DHPjc5S2rjJw9lZn3KSQOs8S7wqikF/AH7iRanHypj85uGyxk0XAyC37w==}
+
+  '@scure/bip32@2.0.1':
+    resolution: {integrity: sha512-4Md1NI5BzoVP+bhyJaY3K6yMesEFzNS1sE/cP+9nuvE7p/b0kx9XbpDHHFl8dHtufcbdHRUUQdRqLIPHN/s7yA==}
+
+  '@scure/bip39@2.0.1':
+    resolution: {integrity: sha512-PsxdFj/d2AcJcZDX1FXN3dDgitDDTmwf78rKZq1a6c1P1Nan1X/Sxc7667zU3U+AN60g7SxxP0YCVw2H/hBycg==}
+
   '@selderee/plugin-htmlparser2@0.12.0':
     resolution: {integrity: sha512-oELmoyA6ML9jDRMV3kgcMQFKxUfBU0yFVn6yTctVaLT5ygXnxH52I3TZEgV9EhXJC68/uFvE5Daj1/25c0Xa/A==}
     peerDependencies:
@@ -2125,6 +2202,10 @@ packages:
 
   '@smithy/core@3.35.1':
     resolution: {integrity: sha512-i4YPS4B6ts7bjn7UwLnGjiZdprOvHvgGobFZsYK3GIY3E5hIqtj0rReU69BcTpGp+fvtraSNXeG1l+jtJvF55w==}
+    engines: {node: '>=18.0.0'}
+
+  '@smithy/core@3.35.2':
+    resolution: {integrity: sha512-ejTukBuP/Pg3t9N8Ux+0zKsXeHWm7p6W3HbXFOyltKasSxZwCFmvTut7kBdZSCF3m9y1bXXyVu6p2xuMFcsTyQ==}
     engines: {node: '>=18.0.0'}
 
   '@smithy/credential-provider-imds@4.5.2':
@@ -3430,6 +3511,17 @@ packages:
     resolution: {integrity: sha512-PNDFSJdP+KFgdsG3ZzMXCgquO7I6McjY2vlqILjtJd0hy8wEvtugS9xKRF2NWlPNGxvLCXlTNIae4serI7dinw==}
     engines: {node: '>=6.0.0'}
 
+  nostr-tools@2.25.2:
+    resolution: {integrity: sha512-7JAx+brEPmqGz1yzaK9MOxvis/Nl1B38j9hVsBSRDMRmxk5XSc0+5LlPEYbzeiUyk41RURBDcfuMzmaT754HAg==}
+    peerDependencies:
+      typescript: '>=5.0.0'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
+  nostr-wasm@0.1.0:
+    resolution: {integrity: sha512-78BTryCLcLYv96ONU8Ws3Q1JzjlAt+43pWQhIl86xZmWeegYCNLPml7yQ+gG3vR6V5h4XGj+TxO+SS5dsThQIA==}
+
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
 
@@ -4328,6 +4420,18 @@ snapshots:
       '@smithy/util-utf8': 4.5.2
       tslib: 2.8.1
 
+  '@aws-sdk/client-cognito-identity-provider@3.1149.0':
+    dependencies:
+      '@aws-sdk/core': 3.978.2
+      '@aws-sdk/credential-provider-node': 3.972.85
+      '@aws-sdk/types': 3.974.6
+      '@smithy/core': 3.35.2
+      '@smithy/fetch-http-handler': 5.8.0
+      '@smithy/node-http-handler': 4.12.1
+      '@smithy/types': 4.19.0
+      tslib: 2.8.1
+    optional: true
+
   '@aws-sdk/client-s3@3.1146.0':
     dependencies:
       '@aws-sdk/checksums': 3.1001.1
@@ -4353,6 +4457,18 @@ snapshots:
       bowser: 2.14.1
       tslib: 2.8.1
 
+  '@aws-sdk/core@3.978.2':
+    dependencies:
+      '@aws-sdk/types': 3.974.6
+      '@aws-sdk/xml-builder': 3.972.41
+      '@aws/lambda-invoke-store': 0.3.0
+      '@smithy/core': 3.35.2
+      '@smithy/signature-v4': 5.7.4
+      '@smithy/types': 4.19.0
+      bowser: 2.14.1
+      tslib: 2.8.1
+    optional: true
+
   '@aws-sdk/credential-provider-env@3.972.72':
     dependencies:
       '@aws-sdk/core': 3.978.1
@@ -4360,6 +4476,15 @@ snapshots:
       '@smithy/core': 3.35.1
       '@smithy/types': 4.19.0
       tslib: 2.8.1
+
+  '@aws-sdk/credential-provider-env@3.972.73':
+    dependencies:
+      '@aws-sdk/core': 3.978.2
+      '@aws-sdk/types': 3.974.6
+      '@smithy/core': 3.35.2
+      '@smithy/types': 4.19.0
+      tslib: 2.8.1
+    optional: true
 
   '@aws-sdk/credential-provider-http@3.972.74':
     dependencies:
@@ -4370,6 +4495,17 @@ snapshots:
       '@smithy/node-http-handler': 4.12.1
       '@smithy/types': 4.19.0
       tslib: 2.8.1
+
+  '@aws-sdk/credential-provider-http@3.972.75':
+    dependencies:
+      '@aws-sdk/core': 3.978.2
+      '@aws-sdk/types': 3.974.6
+      '@smithy/core': 3.35.2
+      '@smithy/fetch-http-handler': 5.8.0
+      '@smithy/node-http-handler': 4.12.1
+      '@smithy/types': 4.19.0
+      tslib: 2.8.1
+    optional: true
 
   '@aws-sdk/credential-provider-ini@3.973.17':
     dependencies:
@@ -4387,6 +4523,23 @@ snapshots:
       '@smithy/types': 4.19.0
       tslib: 2.8.1
 
+  '@aws-sdk/credential-provider-ini@3.973.18':
+    dependencies:
+      '@aws-sdk/core': 3.978.2
+      '@aws-sdk/credential-provider-env': 3.972.73
+      '@aws-sdk/credential-provider-http': 3.972.75
+      '@aws-sdk/credential-provider-login': 3.972.80
+      '@aws-sdk/credential-provider-process': 3.972.73
+      '@aws-sdk/credential-provider-sso': 3.973.17
+      '@aws-sdk/credential-provider-web-identity': 3.972.79
+      '@aws-sdk/nested-clients': 3.997.47
+      '@aws-sdk/types': 3.974.6
+      '@smithy/core': 3.35.2
+      '@smithy/credential-provider-imds': 4.5.2
+      '@smithy/types': 4.19.0
+      tslib: 2.8.1
+    optional: true
+
   '@aws-sdk/credential-provider-login@3.972.79':
     dependencies:
       '@aws-sdk/core': 3.978.1
@@ -4395,6 +4548,16 @@ snapshots:
       '@smithy/core': 3.35.1
       '@smithy/types': 4.19.0
       tslib: 2.8.1
+
+  '@aws-sdk/credential-provider-login@3.972.80':
+    dependencies:
+      '@aws-sdk/core': 3.978.2
+      '@aws-sdk/nested-clients': 3.997.47
+      '@aws-sdk/types': 3.974.6
+      '@smithy/core': 3.35.2
+      '@smithy/types': 4.19.0
+      tslib: 2.8.1
+    optional: true
 
   '@aws-sdk/credential-provider-node@3.972.84':
     dependencies:
@@ -4410,6 +4573,21 @@ snapshots:
       '@smithy/types': 4.19.0
       tslib: 2.8.1
 
+  '@aws-sdk/credential-provider-node@3.972.85':
+    dependencies:
+      '@aws-sdk/credential-provider-env': 3.972.73
+      '@aws-sdk/credential-provider-http': 3.972.75
+      '@aws-sdk/credential-provider-ini': 3.973.18
+      '@aws-sdk/credential-provider-process': 3.972.73
+      '@aws-sdk/credential-provider-sso': 3.973.17
+      '@aws-sdk/credential-provider-web-identity': 3.972.79
+      '@aws-sdk/types': 3.974.6
+      '@smithy/core': 3.35.2
+      '@smithy/credential-provider-imds': 4.5.2
+      '@smithy/types': 4.19.0
+      tslib: 2.8.1
+    optional: true
+
   '@aws-sdk/credential-provider-process@3.972.72':
     dependencies:
       '@aws-sdk/core': 3.978.1
@@ -4417,6 +4595,15 @@ snapshots:
       '@smithy/core': 3.35.1
       '@smithy/types': 4.19.0
       tslib: 2.8.1
+
+  '@aws-sdk/credential-provider-process@3.972.73':
+    dependencies:
+      '@aws-sdk/core': 3.978.2
+      '@aws-sdk/types': 3.974.6
+      '@smithy/core': 3.35.2
+      '@smithy/types': 4.19.0
+      tslib: 2.8.1
+    optional: true
 
   '@aws-sdk/credential-provider-sso@3.973.16':
     dependencies:
@@ -4428,6 +4615,17 @@ snapshots:
       '@smithy/types': 4.19.0
       tslib: 2.8.1
 
+  '@aws-sdk/credential-provider-sso@3.973.17':
+    dependencies:
+      '@aws-sdk/core': 3.978.2
+      '@aws-sdk/nested-clients': 3.997.47
+      '@aws-sdk/token-providers': 3.1149.0
+      '@aws-sdk/types': 3.974.6
+      '@smithy/core': 3.35.2
+      '@smithy/types': 4.19.0
+      tslib: 2.8.1
+    optional: true
+
   '@aws-sdk/credential-provider-web-identity@3.972.78':
     dependencies:
       '@aws-sdk/core': 3.978.1
@@ -4436,6 +4634,16 @@ snapshots:
       '@smithy/core': 3.35.1
       '@smithy/types': 4.19.0
       tslib: 2.8.1
+
+  '@aws-sdk/credential-provider-web-identity@3.972.79':
+    dependencies:
+      '@aws-sdk/core': 3.978.2
+      '@aws-sdk/nested-clients': 3.997.47
+      '@aws-sdk/types': 3.974.6
+      '@smithy/core': 3.35.2
+      '@smithy/types': 4.19.0
+      tslib: 2.8.1
+    optional: true
 
   '@aws-sdk/eventstream-handler-node@3.972.35':
     dependencies:
@@ -4501,6 +4709,18 @@ snapshots:
       '@smithy/types': 4.19.0
       tslib: 2.8.1
 
+  '@aws-sdk/nested-clients@3.997.47':
+    dependencies:
+      '@aws-sdk/core': 3.978.2
+      '@aws-sdk/signature-v4-multi-region': 3.996.48
+      '@aws-sdk/types': 3.974.6
+      '@smithy/core': 3.35.2
+      '@smithy/fetch-http-handler': 5.8.0
+      '@smithy/node-http-handler': 4.12.1
+      '@smithy/types': 4.19.0
+      tslib: 2.8.1
+    optional: true
+
   '@aws-sdk/region-config-resolver@3.972.50':
     dependencies:
       '@aws-sdk/core': 3.978.1
@@ -4512,6 +4732,14 @@ snapshots:
       '@smithy/signature-v4': 5.7.4
       '@smithy/types': 4.19.0
       tslib: 2.8.1
+
+  '@aws-sdk/signature-v4-multi-region@3.996.48':
+    dependencies:
+      '@aws-sdk/types': 3.974.6
+      '@smithy/signature-v4': 5.7.4
+      '@smithy/types': 4.19.0
+      tslib: 2.8.1
+    optional: true
 
   '@aws-sdk/token-providers@3.1034.0':
     dependencies:
@@ -4531,6 +4759,16 @@ snapshots:
       '@smithy/core': 3.35.1
       '@smithy/types': 4.19.0
       tslib: 2.8.1
+
+  '@aws-sdk/token-providers@3.1149.0':
+    dependencies:
+      '@aws-sdk/core': 3.978.2
+      '@aws-sdk/nested-clients': 3.997.47
+      '@aws-sdk/types': 3.974.6
+      '@smithy/core': 3.35.2
+      '@smithy/types': 4.19.0
+      tslib: 2.8.1
+    optional: true
 
   '@aws-sdk/types@3.974.6':
     dependencies:
@@ -4780,12 +5018,12 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@happyvertical/ai@0.103.4(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/ai@0.103.5(ws@8.22.0)(zod@4.6.5)':
     dependencies:
       '@anthropic-ai/sdk': 0.90.0(zod@4.6.5)
       '@aws-sdk/client-bedrock-runtime': 3.1034.0
       '@google/genai': 1.50.1
-      '@happyvertical/utils': 0.103.4
+      '@happyvertical/utils': 0.103.5
       openai: 6.34.0(ws@8.22.0)(zod@4.6.5)
     transitivePeerDependencies:
       - '@modelcontextprotocol/sdk'
@@ -4799,10 +5037,20 @@ snapshots:
     dependencies:
       gsap: 3.15.0
 
-  '@happyvertical/email@0.103.4':
+  '@happyvertical/auth@0.103.5(typescript@6.0.3)':
     dependencies:
-      '@happyvertical/logger': 0.103.4
-      '@happyvertical/utils': 0.103.4
+      '@happyvertical/utils': 0.103.5
+      jose: 6.2.12
+    optionalDependencies:
+      '@aws-sdk/client-cognito-identity-provider': 3.1149.0
+      nostr-tools: 2.25.2(typescript@6.0.3)
+    transitivePeerDependencies:
+      - typescript
+
+  '@happyvertical/email@0.103.5':
+    dependencies:
+      '@happyvertical/logger': 0.103.5
+      '@happyvertical/utils': 0.103.5
       google-auth-library: 10.9.1
       googleapis: 170.1.0
       imapflow: 1.7.8
@@ -4813,17 +5061,17 @@ snapshots:
       - '@sentry/node'
       - supports-color
 
-  '@happyvertical/files@0.103.4':
+  '@happyvertical/files@0.103.5':
     dependencies:
       '@aws-sdk/client-s3': 3.1146.0
-      '@happyvertical/utils': 0.103.4
+      '@happyvertical/utils': 0.103.5
       google-auth-library: 9.15.1
       googleapis: 144.0.0
     transitivePeerDependencies:
       - encoding
       - supports-color
 
-  '@happyvertical/images@0.103.4(jimp@1.6.1)(sharp@0.35.5(@types/node@24.19.1))':
+  '@happyvertical/images@0.103.5(jimp@1.6.1)(sharp@0.35.5(@types/node@24.19.1))':
     dependencies:
       '@mediapipe/tasks-vision': 1.1.0
       '@resvg/resvg-js': 2.6.2
@@ -4832,10 +5080,10 @@ snapshots:
       jimp: 1.6.1
       sharp: 0.35.5(@types/node@24.19.1)
 
-  '@happyvertical/jobs@0.103.4':
+  '@happyvertical/jobs@0.103.5':
     dependencies:
-      '@happyvertical/sql': 0.103.4
-      '@happyvertical/utils': 0.103.4
+      '@happyvertical/sql': 0.103.5
+      '@happyvertical/utils': 0.103.5
     transitivePeerDependencies:
       - '@electric-sql/pglite'
       - '@russellthehippo/honker-node'
@@ -4845,27 +5093,27 @@ snapshots:
       - pg-native
       - utf-8-validate
 
-  '@happyvertical/json@0.103.4': {}
+  '@happyvertical/json@0.103.5': {}
 
-  '@happyvertical/logger@0.103.4':
+  '@happyvertical/logger@0.103.5':
     dependencies:
-      '@happyvertical/utils': 0.103.4
+      '@happyvertical/utils': 0.103.5
 
-  '@happyvertical/messages@0.103.4(debug@4.4.3)':
+  '@happyvertical/messages@0.103.5(debug@4.4.3)':
     dependencies:
-      '@happyvertical/email': 0.103.4
-      '@happyvertical/logger': 0.103.4
-      '@happyvertical/utils': 0.103.4
+      '@happyvertical/email': 0.103.5
+      '@happyvertical/logger': 0.103.5
+      '@happyvertical/utils': 0.103.5
       '@slack/web-api': 7.19.0(debug@4.4.3)
     transitivePeerDependencies:
       - '@sentry/node'
       - debug
       - supports-color
 
-  '@happyvertical/secrets@0.103.4':
+  '@happyvertical/secrets@0.103.5':
     dependencies:
-      '@happyvertical/sql': 0.103.4
-      '@happyvertical/utils': 0.103.4
+      '@happyvertical/sql': 0.103.5
+      '@happyvertical/utils': 0.103.5
     transitivePeerDependencies:
       - '@electric-sql/pglite'
       - '@russellthehippo/honker-node'
@@ -4875,23 +5123,23 @@ snapshots:
       - pg-native
       - utf-8-validate
 
-  '@happyvertical/smrt-agents@0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-agents@0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/ai': 0.103.4(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/files': 0.103.4
-      '@happyvertical/logger': 0.103.4
-      '@happyvertical/smrt-config': 0.55.18
-      '@happyvertical/smrt-core': 0.55.18(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-jobs': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-playbooks': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-reports': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-secrets': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-tenancy': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-types': 0.55.18
-      '@happyvertical/smrt-ui': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)
-      '@happyvertical/smrt-users': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/sql': 0.103.4
-      '@happyvertical/utils': 0.103.4
+      '@happyvertical/ai': 0.103.5(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/files': 0.103.5
+      '@happyvertical/logger': 0.103.5
+      '@happyvertical/smrt-config': 0.55.19
+      '@happyvertical/smrt-core': 0.55.19(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-jobs': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-playbooks': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-reports': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-secrets': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-tenancy': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-types': 0.55.19
+      '@happyvertical/smrt-ui': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)
+      '@happyvertical/smrt-users': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/sql': 0.103.5
+      '@happyvertical/utils': 0.103.5
     optionalDependencies:
       svelte: 5.57.1
     transitivePeerDependencies:
@@ -4912,13 +5160,14 @@ snapshots:
       - encoding
       - pg-native
       - supports-color
+      - typescript
       - utf-8-validate
       - ws
       - zod
 
-  '@happyvertical/smrt-app-cli@0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-app-cli@0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/smrt-users': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-users': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)
       '@modelcontextprotocol/client': 2.0.0
       '@modelcontextprotocol/server': 2.0.0
     transitivePeerDependencies:
@@ -4936,15 +5185,16 @@ snapshots:
       - pg-native
       - supports-color
       - svelte
+      - typescript
       - utf-8-validate
       - ws
       - zod
 
-  '@happyvertical/smrt-app-mcp@0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-app-mcp@0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/smrt-core': 0.55.18(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-jobs': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/sql': 0.103.4
+      '@happyvertical/smrt-core': 0.55.19(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-jobs': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/sql': 0.103.5
       '@modelcontextprotocol/server': 2.0.0
       jose: 6.2.12
       parse5: 8.0.1
@@ -4971,15 +5221,15 @@ snapshots:
       - ws
       - zod
 
-  '@happyvertical/smrt-app-runtime@0.55.18(@happyvertical/speech@0.103.4)(@sveltejs/kit@2.70.3(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.1)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-app-runtime@0.55.19(@happyvertical/speech@0.103.5)(@sveltejs/kit@2.70.3(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.1)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/smrt-config': 0.55.18
-      '@happyvertical/smrt-core': 0.55.18(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-jobs': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-profiles': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-tenancy': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-users': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/sql': 0.103.4
+      '@happyvertical/smrt-config': 0.55.19
+      '@happyvertical/smrt-core': 0.55.19(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-jobs': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-profiles': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-tenancy': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-users': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/sql': 0.103.5
     optionalDependencies:
       '@sveltejs/kit': 2.70.3(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.1)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
     transitivePeerDependencies:
@@ -5001,22 +5251,23 @@ snapshots:
       - pg-native
       - supports-color
       - svelte
+      - typescript
       - utf-8-validate
       - ws
       - zod
 
-  '@happyvertical/smrt-assets@0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-assets@0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/ai': 0.103.4(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/files': 0.103.4
-      '@happyvertical/logger': 0.103.4
-      '@happyvertical/smrt-core': 0.55.18(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-tags': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-tenancy': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-types': 0.55.18
-      '@happyvertical/smrt-ui': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)
-      '@happyvertical/sql': 0.103.4
-      '@happyvertical/utils': 0.103.4
+      '@happyvertical/ai': 0.103.5(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/files': 0.103.5
+      '@happyvertical/logger': 0.103.5
+      '@happyvertical/smrt-core': 0.55.19(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-tags': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-tenancy': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-types': 0.55.19
+      '@happyvertical/smrt-ui': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)
+      '@happyvertical/sql': 0.103.5
+      '@happyvertical/utils': 0.103.5
     optionalDependencies:
       svelte: 5.57.1
     transitivePeerDependencies:
@@ -5037,25 +5288,25 @@ snapshots:
       - ws
       - zod
 
-  '@happyvertical/smrt-chat@0.55.18(@types/node@24.19.1)(debug@4.4.3)(jimp@1.6.1)(sharp@0.35.5(@types/node@24.19.1))(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-chat@0.55.19(@types/node@24.19.1)(debug@4.4.3)(jimp@1.6.1)(sharp@0.35.5(@types/node@24.19.1))(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/ai': 0.103.4(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/ai': 0.103.5(ws@8.22.0)(zod@4.6.5)
       '@happyvertical/animation': 0.5.0(gsap@3.15.0)
-      '@happyvertical/images': 0.103.4(jimp@1.6.1)(sharp@0.35.5(@types/node@24.19.1))
-      '@happyvertical/smrt-agents': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-assets': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-config': 0.55.18
-      '@happyvertical/smrt-core': 0.55.18(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-images': 0.55.18(@happyvertical/speech@0.103.4)(@types/node@24.19.1)(gsap@3.15.0)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-personas': 0.55.18(@happyvertical/speech@0.103.4)(debug@4.4.3)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-profiles': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-reports': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-tenancy': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-types': 0.55.18
-      '@happyvertical/smrt-ui': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)
-      '@happyvertical/smrt-users': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/speech': 0.103.4
-      '@happyvertical/sql': 0.103.4
+      '@happyvertical/images': 0.103.5(jimp@1.6.1)(sharp@0.35.5(@types/node@24.19.1))
+      '@happyvertical/smrt-agents': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-assets': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-config': 0.55.19
+      '@happyvertical/smrt-core': 0.55.19(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-images': 0.55.19(@happyvertical/speech@0.103.5)(@types/node@24.19.1)(gsap@3.15.0)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-personas': 0.55.19(@happyvertical/speech@0.103.5)(debug@4.4.3)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-profiles': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-reports': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-tenancy': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-types': 0.55.19
+      '@happyvertical/smrt-ui': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)
+      '@happyvertical/smrt-users': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/speech': 0.103.5
+      '@happyvertical/sql': 0.103.5
       gsap: 3.15.0
     optionalDependencies:
       svelte: 5.57.1
@@ -5081,26 +5332,27 @@ snapshots:
       - pg-native
       - sharp
       - supports-color
+      - typescript
       - utf-8-validate
       - ws
       - zod
 
-  '@happyvertical/smrt-cli@0.55.18(@happyvertical/speech@0.103.4)(@sveltejs/kit@2.70.3(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.1)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(hono@4.13.13)(svelte@5.57.1)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-cli@0.55.19(@happyvertical/speech@0.103.5)(@sveltejs/kit@2.70.3(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.1)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(hono@4.13.13)(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/ai': 0.103.4(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/files': 0.103.4
-      '@happyvertical/logger': 0.103.4
-      '@happyvertical/smrt-agents': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-app-runtime': 0.55.18(@happyvertical/speech@0.103.4)(@sveltejs/kit@2.70.3(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.1)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-config': 0.55.18
-      '@happyvertical/smrt-core': 0.55.18(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-dev-mcp': 0.55.18(hono@4.13.13)
-      '@happyvertical/smrt-ledgers': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-playground': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
-      '@happyvertical/smrt-types': 0.55.18
-      '@happyvertical/smrt-users': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/sql': 0.103.4
-      '@happyvertical/utils': 0.103.4
+      '@happyvertical/ai': 0.103.5(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/files': 0.103.5
+      '@happyvertical/logger': 0.103.5
+      '@happyvertical/smrt-agents': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-app-runtime': 0.55.19(@happyvertical/speech@0.103.5)(@sveltejs/kit@2.70.3(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.1)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-config': 0.55.19
+      '@happyvertical/smrt-core': 0.55.19(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-dev-mcp': 0.55.19(hono@4.13.13)
+      '@happyvertical/smrt-ledgers': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-playground': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+      '@happyvertical/smrt-types': 0.55.19
+      '@happyvertical/smrt-users': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/sql': 0.103.5
+      '@happyvertical/utils': 0.103.5
       '@modelcontextprotocol/server': 2.0.0
       acorn: 8.19.0
       ajv: 8.20.0
@@ -5127,28 +5379,29 @@ snapshots:
       - pg-native
       - supports-color
       - svelte
+      - typescript
       - utf-8-validate
       - vite
       - ws
       - zod
 
-  '@happyvertical/smrt-config@0.55.18':
+  '@happyvertical/smrt-config@0.55.19':
     dependencies:
-      '@happyvertical/smrt-types': 0.55.18
+      '@happyvertical/smrt-types': 0.55.19
       cosmiconfig: 10.0.1
       jiti: 2.7.0
 
-  '@happyvertical/smrt-core@0.55.18(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-core@0.55.19(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/ai': 0.103.4(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/files': 0.103.4
-      '@happyvertical/json': 0.103.4
-      '@happyvertical/logger': 0.103.4
-      '@happyvertical/smrt-config': 0.55.18
-      '@happyvertical/smrt-scanner': 0.55.18
-      '@happyvertical/smrt-types': 0.55.18
-      '@happyvertical/sql': 0.103.4
-      '@happyvertical/utils': 0.103.4
+      '@happyvertical/ai': 0.103.5(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/files': 0.103.5
+      '@happyvertical/json': 0.103.5
+      '@happyvertical/logger': 0.103.5
+      '@happyvertical/smrt-config': 0.55.19
+      '@happyvertical/smrt-scanner': 0.55.19
+      '@happyvertical/smrt-types': 0.55.19
+      '@happyvertical/sql': 0.103.5
+      '@happyvertical/utils': 0.103.5
       '@noble/hashes': 2.4.0
       '@oxc-project/runtime': 0.150.0
       cheerio: 1.2.0
@@ -5173,19 +5426,19 @@ snapshots:
       - ws
       - zod
 
-  '@happyvertical/smrt-dev-mcp@0.55.18(hono@4.13.13)':
+  '@happyvertical/smrt-dev-mcp@0.55.19(hono@4.13.13)':
     dependencies:
-      '@happyvertical/smrt-scanner': 0.55.18
-      '@happyvertical/smrt-types': 0.55.18
+      '@happyvertical/smrt-scanner': 0.55.19
+      '@happyvertical/smrt-types': 0.55.19
       '@modelcontextprotocol/node': 2.0.0(@modelcontextprotocol/server@2.0.0)(hono@4.13.13)
       '@modelcontextprotocol/server': 2.0.0
     transitivePeerDependencies:
       - hono
 
-  '@happyvertical/smrt-features@0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-features@0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/smrt-core': 0.55.18(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-ui': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)
+      '@happyvertical/smrt-core': 0.55.19(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-ui': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)
     optionalDependencies:
       svelte: 5.57.1
     transitivePeerDependencies:
@@ -5206,18 +5459,18 @@ snapshots:
       - ws
       - zod
 
-  '@happyvertical/smrt-images@0.55.18(@happyvertical/speech@0.103.4)(@types/node@24.19.1)(gsap@3.15.0)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-images@0.55.19(@happyvertical/speech@0.103.5)(@types/node@24.19.1)(gsap@3.15.0)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/ai': 0.103.4(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/ai': 0.103.5(ws@8.22.0)(zod@4.6.5)
       '@happyvertical/animation': 0.5.0(gsap@3.15.0)
-      '@happyvertical/images': 0.103.4(jimp@1.6.1)(sharp@0.35.5(@types/node@24.19.1))
-      '@happyvertical/smrt-assets': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-core': 0.55.18(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-prompts': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-tenancy': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-types': 0.55.18
-      '@happyvertical/smrt-ui': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)
-      '@happyvertical/utils': 0.103.4
+      '@happyvertical/images': 0.103.5(jimp@1.6.1)(sharp@0.35.5(@types/node@24.19.1))
+      '@happyvertical/smrt-assets': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-core': 0.55.19(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-prompts': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-tenancy': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-types': 0.55.19
+      '@happyvertical/smrt-ui': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)
+      '@happyvertical/utils': 0.103.5
       jimp: 1.6.1
       sharp: 0.35.5(@types/node@24.19.1)
       svelte: 5.57.1
@@ -5241,17 +5494,17 @@ snapshots:
       - ws
       - zod
 
-  '@happyvertical/smrt-jobs@0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-jobs@0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/jobs': 0.103.4
-      '@happyvertical/logger': 0.103.4
-      '@happyvertical/smrt-config': 0.55.18
-      '@happyvertical/smrt-core': 0.55.18(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-tenancy': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-types': 0.55.18
-      '@happyvertical/smrt-ui': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)
-      '@happyvertical/sql': 0.103.4
-      '@happyvertical/utils': 0.103.4
+      '@happyvertical/jobs': 0.103.5
+      '@happyvertical/logger': 0.103.5
+      '@happyvertical/smrt-config': 0.55.19
+      '@happyvertical/smrt-core': 0.55.19(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-tenancy': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-types': 0.55.19
+      '@happyvertical/smrt-ui': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)
+      '@happyvertical/sql': 0.103.5
+      '@happyvertical/utils': 0.103.5
     optionalDependencies:
       svelte: 5.57.1
     transitivePeerDependencies:
@@ -5276,17 +5529,17 @@ snapshots:
       - ws
       - zod
 
-  '@happyvertical/smrt-languages@0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-languages@0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/ai': 0.103.4(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/logger': 0.103.4
-      '@happyvertical/smrt-config': 0.55.18
-      '@happyvertical/smrt-core': 0.55.18(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-features': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-jobs': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-prompts': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-tenancy': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/sql': 0.103.4
+      '@happyvertical/ai': 0.103.5(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/logger': 0.103.5
+      '@happyvertical/smrt-config': 0.55.19
+      '@happyvertical/smrt-core': 0.55.19(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-features': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-jobs': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-prompts': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-tenancy': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/sql': 0.103.5
     transitivePeerDependencies:
       - '@aws-sdk/client-sqs'
       - '@electric-sql/pglite'
@@ -5310,11 +5563,11 @@ snapshots:
       - ws
       - zod
 
-  '@happyvertical/smrt-ledgers@0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-ledgers@0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/smrt-core': 0.55.18(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-prompts': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-tenancy': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-core': 0.55.19(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-prompts': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-tenancy': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
     transitivePeerDependencies:
       - '@electric-sql/pglite'
       - '@happyvertical/speech'
@@ -5334,22 +5587,22 @@ snapshots:
       - ws
       - zod
 
-  '@happyvertical/smrt-mcp-apps@0.55.18': {}
+  '@happyvertical/smrt-mcp-apps@0.55.19': {}
 
-  '@happyvertical/smrt-messages@0.55.18(@happyvertical/speech@0.103.4)(debug@4.4.3)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-messages@0.55.19(@happyvertical/speech@0.103.5)(debug@4.4.3)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/email': 0.103.4
-      '@happyvertical/files': 0.103.4
-      '@happyvertical/logger': 0.103.4
-      '@happyvertical/messages': 0.103.4(debug@4.4.3)
-      '@happyvertical/smrt-core': 0.55.18(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-secrets': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-tenancy': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-types': 0.55.18
-      '@happyvertical/smrt-ui': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)
-      '@happyvertical/smrt-users': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/sql': 0.103.4
-      '@happyvertical/utils': 0.103.4
+      '@happyvertical/email': 0.103.5
+      '@happyvertical/files': 0.103.5
+      '@happyvertical/logger': 0.103.5
+      '@happyvertical/messages': 0.103.5(debug@4.4.3)
+      '@happyvertical/smrt-core': 0.55.19(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-secrets': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-tenancy': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-types': 0.55.19
+      '@happyvertical/smrt-ui': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)
+      '@happyvertical/smrt-users': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/sql': 0.103.5
+      '@happyvertical/utils': 0.103.5
     optionalDependencies:
       svelte: 5.57.1
     transitivePeerDependencies:
@@ -5367,22 +5620,23 @@ snapshots:
       - encoding
       - pg-native
       - supports-color
+      - typescript
       - utf-8-validate
       - ws
       - zod
 
-  '@happyvertical/smrt-mobile-contract@0.55.18': {}
+  '@happyvertical/smrt-mobile-contract@0.55.19': {}
 
-  '@happyvertical/smrt-personas@0.55.18(@happyvertical/speech@0.103.4)(debug@4.4.3)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-personas@0.55.19(@happyvertical/speech@0.103.5)(debug@4.4.3)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/smrt-agents': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-core': 0.55.18(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-messages': 0.55.18(@happyvertical/speech@0.103.4)(debug@4.4.3)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-prompts': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-tenancy': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-ui': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)
-      '@happyvertical/smrt-users': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/sql': 0.103.4
+      '@happyvertical/smrt-agents': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-core': 0.55.19(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-messages': 0.55.19(@happyvertical/speech@0.103.5)(debug@4.4.3)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-prompts': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-tenancy': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-ui': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)
+      '@happyvertical/smrt-users': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/sql': 0.103.5
       svelte: 5.57.1
     transitivePeerDependencies:
       - '@aws-sdk/client-sqs'
@@ -5404,17 +5658,18 @@ snapshots:
       - encoding
       - pg-native
       - supports-color
+      - typescript
       - utf-8-validate
       - ws
       - zod
 
-  '@happyvertical/smrt-playbooks@0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-playbooks@0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/smrt-config': 0.55.18
-      '@happyvertical/smrt-core': 0.55.18(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-tenancy': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-types': 0.55.18
-      '@happyvertical/sql': 0.103.4
+      '@happyvertical/smrt-config': 0.55.19
+      '@happyvertical/smrt-core': 0.55.19(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-tenancy': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-types': 0.55.19
+      '@happyvertical/sql': 0.103.5
     transitivePeerDependencies:
       - '@electric-sql/pglite'
       - '@happyvertical/speech'
@@ -5434,9 +5689,9 @@ snapshots:
       - ws
       - zod
 
-  '@happyvertical/smrt-playground@0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))':
+  '@happyvertical/smrt-playground@0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))':
     dependencies:
-      '@happyvertical/smrt-ui': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)
+      '@happyvertical/smrt-ui': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)
       fast-glob: 3.3.3
       tsx: 4.23.15
     optionalDependencies:
@@ -5445,13 +5700,13 @@ snapshots:
     transitivePeerDependencies:
       - '@happyvertical/speech'
 
-  '@happyvertical/smrt-preferences@0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-preferences@0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/smrt-core': 0.55.18(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-svelte': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-tenancy': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-users': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/sql': 0.103.4
+      '@happyvertical/smrt-core': 0.55.19(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-svelte': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-tenancy': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-users': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/sql': 0.103.5
     transitivePeerDependencies:
       - '@aws-sdk/client-sqs'
       - '@electric-sql/pglite'
@@ -5479,17 +5734,17 @@ snapshots:
       - ws
       - zod
 
-  '@happyvertical/smrt-profiles@0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-profiles@0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/ai': 0.103.4(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/files': 0.103.4
-      '@happyvertical/logger': 0.103.4
-      '@happyvertical/smrt-assets': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-core': 0.55.18(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-prompts': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-tenancy': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/sql': 0.103.4
-      '@happyvertical/utils': 0.103.4
+      '@happyvertical/ai': 0.103.5(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/files': 0.103.5
+      '@happyvertical/logger': 0.103.5
+      '@happyvertical/smrt-assets': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-core': 0.55.19(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-prompts': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-tenancy': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/sql': 0.103.5
+      '@happyvertical/utils': 0.103.5
       '@noble/curves': 2.4.0
       bech32: 2.0.0
     transitivePeerDependencies:
@@ -5511,13 +5766,13 @@ snapshots:
       - ws
       - zod
 
-  '@happyvertical/smrt-prompts@0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-prompts@0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/smrt-config': 0.55.18
-      '@happyvertical/smrt-core': 0.55.18(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-tenancy': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-ui': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)
-      '@happyvertical/sql': 0.103.4
+      '@happyvertical/smrt-config': 0.55.19
+      '@happyvertical/smrt-core': 0.55.19(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-tenancy': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-ui': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)
+      '@happyvertical/sql': 0.103.5
     optionalDependencies:
       svelte: 5.57.1
     transitivePeerDependencies:
@@ -5538,13 +5793,13 @@ snapshots:
       - ws
       - zod
 
-  '@happyvertical/smrt-reports@0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-reports@0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/smrt-core': 0.55.18(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-jobs': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-tenancy': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-types': 0.55.18
-      '@happyvertical/sql': 0.103.4
+      '@happyvertical/smrt-core': 0.55.19(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-jobs': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-tenancy': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-types': 0.55.19
+      '@happyvertical/sql': 0.103.5
     transitivePeerDependencies:
       - '@aws-sdk/client-sqs'
       - '@electric-sql/pglite'
@@ -5568,22 +5823,22 @@ snapshots:
       - ws
       - zod
 
-  '@happyvertical/smrt-scanner@0.55.18':
+  '@happyvertical/smrt-scanner@0.55.19':
     dependencies:
-      '@happyvertical/smrt-types': 0.55.18
+      '@happyvertical/smrt-types': 0.55.19
       fast-glob: 3.3.3
       minimatch: 10.2.6
       oxc-parser: 0.150.0
       oxc-resolver: 11.24.2
 
-  '@happyvertical/smrt-secrets@0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-secrets@0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/logger': 0.103.4
-      '@happyvertical/secrets': 0.103.4
-      '@happyvertical/smrt-core': 0.55.18(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-tenancy': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/sql': 0.103.4
-      '@happyvertical/utils': 0.103.4
+      '@happyvertical/logger': 0.103.5
+      '@happyvertical/secrets': 0.103.5
+      '@happyvertical/smrt-core': 0.55.19(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-tenancy': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/sql': 0.103.5
+      '@happyvertical/utils': 0.103.5
     transitivePeerDependencies:
       - '@electric-sql/pglite'
       - '@happyvertical/speech'
@@ -5603,20 +5858,20 @@ snapshots:
       - ws
       - zod
 
-  '@happyvertical/smrt-svelte@0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-svelte@0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/logger': 0.103.4
-      '@happyvertical/smrt-languages': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-mcp-apps': 0.55.18
-      '@happyvertical/smrt-types': 0.55.18
-      '@happyvertical/smrt-ui': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)
-      '@happyvertical/smrt-web': 0.55.18(typescript@6.0.3)
+      '@happyvertical/logger': 0.103.5
+      '@happyvertical/smrt-languages': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-mcp-apps': 0.55.19
+      '@happyvertical/smrt-types': 0.55.19
+      '@happyvertical/smrt-ui': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)
+      '@happyvertical/smrt-web': 0.55.19(typescript@6.0.3)
       '@tanstack/db': 0.6.17(typescript@6.0.3)
       '@tanstack/svelte-db': 0.1.94(svelte@5.57.1)(typescript@6.0.3)
       esm-env: 1.2.2
       svelte: 5.57.1
     optionalDependencies:
-      '@happyvertical/speech': 0.103.4
+      '@happyvertical/speech': 0.103.5
     transitivePeerDependencies:
       - '@aws-sdk/client-sqs'
       - '@electric-sql/pglite'
@@ -5637,15 +5892,15 @@ snapshots:
       - ws
       - zod
 
-  '@happyvertical/smrt-tags@0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-tags@0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/ai': 0.103.4(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/files': 0.103.4
-      '@happyvertical/logger': 0.103.4
-      '@happyvertical/smrt-core': 0.55.18(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-tenancy': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/sql': 0.103.4
-      '@happyvertical/utils': 0.103.4
+      '@happyvertical/ai': 0.103.5(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/files': 0.103.5
+      '@happyvertical/logger': 0.103.5
+      '@happyvertical/smrt-core': 0.55.19(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-tenancy': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/sql': 0.103.5
+      '@happyvertical/utils': 0.103.5
     transitivePeerDependencies:
       - '@electric-sql/pglite'
       - '@happyvertical/speech'
@@ -5665,14 +5920,14 @@ snapshots:
       - ws
       - zod
 
-  '@happyvertical/smrt-tenancy@0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-tenancy@0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/logger': 0.103.4
-      '@happyvertical/smrt-core': 0.55.18(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-types': 0.55.18
-      '@happyvertical/smrt-ui': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)
-      '@happyvertical/sql': 0.103.4
-      '@happyvertical/utils': 0.103.4
+      '@happyvertical/logger': 0.103.5
+      '@happyvertical/smrt-core': 0.55.19(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-types': 0.55.19
+      '@happyvertical/smrt-ui': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)
+      '@happyvertical/sql': 0.103.5
+      '@happyvertical/utils': 0.103.5
     optionalDependencies:
       svelte: 5.57.1
     transitivePeerDependencies:
@@ -5693,27 +5948,28 @@ snapshots:
       - ws
       - zod
 
-  '@happyvertical/smrt-types@0.55.18': {}
+  '@happyvertical/smrt-types@0.55.19': {}
 
-  '@happyvertical/smrt-ui@0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)':
+  '@happyvertical/smrt-ui@0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)':
     dependencies:
-      '@happyvertical/smrt-types': 0.55.18
+      '@happyvertical/smrt-types': 0.55.19
       esm-env: 1.2.2
     optionalDependencies:
-      '@happyvertical/speech': 0.103.4
+      '@happyvertical/speech': 0.103.5
       svelte: 5.57.1
 
-  '@happyvertical/smrt-users@0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-users@0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(typescript@6.0.3)(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/logger': 0.103.4
-      '@happyvertical/smrt-config': 0.55.18
-      '@happyvertical/smrt-core': 0.55.18(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-mobile-contract': 0.55.18
-      '@happyvertical/smrt-profiles': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-tenancy': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/smrt-types': 0.55.18
-      '@happyvertical/smrt-ui': 0.55.18(@happyvertical/speech@0.103.4)(svelte@5.57.1)
-      '@happyvertical/sql': 0.103.4
+      '@happyvertical/auth': 0.103.5(typescript@6.0.3)
+      '@happyvertical/logger': 0.103.5
+      '@happyvertical/smrt-config': 0.55.19
+      '@happyvertical/smrt-core': 0.55.19(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-mobile-contract': 0.55.19
+      '@happyvertical/smrt-profiles': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-tenancy': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/smrt-types': 0.55.19
+      '@happyvertical/smrt-ui': 0.55.19(@happyvertical/speech@0.103.5)(svelte@5.57.1)
+      '@happyvertical/sql': 0.103.5
       jose: 6.2.12
     optionalDependencies:
       svelte: 5.57.1
@@ -5731,14 +5987,15 @@ snapshots:
       - encoding
       - pg-native
       - supports-color
+      - typescript
       - utf-8-validate
       - ws
       - zod
 
-  '@happyvertical/smrt-vitest@0.55.18(@noble/hashes@2.4.0)(@testing-library/dom@10.4.2)(svelte@5.57.1)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))(vitest@4.1.10(@types/node@24.19.1)(jsdom@29.1.1(@noble/hashes@2.4.0))(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(ws@8.22.0)(zod@4.6.5)':
+  '@happyvertical/smrt-vitest@0.55.19(@noble/hashes@2.4.0)(@testing-library/dom@10.4.2)(svelte@5.57.1)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))(vitest@4.1.10(@types/node@24.19.1)(jsdom@29.1.1(@noble/hashes@2.4.0))(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(ws@8.22.0)(zod@4.6.5)':
     dependencies:
-      '@happyvertical/smrt-core': 0.55.18(ws@8.22.0)(zod@4.6.5)
-      '@happyvertical/sql': 0.103.4
+      '@happyvertical/smrt-core': 0.55.19(ws@8.22.0)(zod@4.6.5)
+      '@happyvertical/sql': 0.103.5
       '@testing-library/jest-dom': 7.0.1(@testing-library/dom@10.4.2)(vitest@4.1.10(@types/node@24.19.1)(jsdom@29.1.1(@noble/hashes@2.4.0))(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))
       '@testing-library/svelte': 5.4.2(svelte@5.57.1)(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))(vitest@4.1.10(@types/node@24.19.1)(jsdom@29.1.1(@noble/hashes@2.4.0))(vite@8.3.0(@types/node@24.19.1)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))
       '@testing-library/user-event': 14.6.7(@testing-library/dom@10.4.2)
@@ -5769,7 +6026,7 @@ snapshots:
       - ws
       - zod
 
-  '@happyvertical/smrt-web@0.55.18(typescript@6.0.3)':
+  '@happyvertical/smrt-web@0.55.19(typescript@6.0.3)':
     dependencies:
       '@tanstack/db': 0.6.17(typescript@6.0.3)
       '@tanstack/query-core': 5.104.1
@@ -5777,12 +6034,12 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@happyvertical/speech@0.103.4': {}
+  '@happyvertical/speech@0.103.5': {}
 
-  '@happyvertical/sql@0.103.4':
+  '@happyvertical/sql@0.103.5':
     dependencies:
       '@duckdb/node-api': 1.4.3-r.3
-      '@happyvertical/utils': 0.103.4
+      '@happyvertical/utils': 0.103.5
       '@libsql/client': 0.17.2
       pg: 8.23.1
       sqlite-vss: 0.1.2
@@ -5792,7 +6049,7 @@ snapshots:
       - pg-native
       - utf-8-validate
 
-  '@happyvertical/utils@0.103.4':
+  '@happyvertical/utils@0.103.5':
     dependencies:
       '@paralleldrive/cuid2': 3.3.0
       '@types/pluralize': 0.0.33
@@ -6276,9 +6533,20 @@ snapshots:
 
   '@neon-rs/load@0.0.4': {}
 
+  '@noble/ciphers@2.1.1':
+    optional: true
+
+  '@noble/curves@2.0.1':
+    dependencies:
+      '@noble/hashes': 2.0.1
+    optional: true
+
   '@noble/curves@2.4.0':
     dependencies:
       '@noble/hashes': 2.4.0
+
+  '@noble/hashes@2.0.1':
+    optional: true
 
   '@noble/hashes@2.4.0': {}
 
@@ -6724,6 +6992,22 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.64.0':
     optional: true
 
+  '@scure/base@2.0.0':
+    optional: true
+
+  '@scure/bip32@2.0.1':
+    dependencies:
+      '@noble/curves': 2.0.1
+      '@noble/hashes': 2.0.1
+      '@scure/base': 2.0.0
+    optional: true
+
+  '@scure/bip39@2.0.1':
+    dependencies:
+      '@noble/hashes': 2.0.1
+      '@scure/base': 2.0.0
+    optional: true
+
   '@selderee/plugin-htmlparser2@0.12.0(selderee@0.12.0)':
     dependencies:
       domelementtype: 2.3.0
@@ -6768,6 +7052,12 @@ snapshots:
     dependencies:
       '@smithy/types': 4.19.0
       tslib: 2.8.1
+
+  '@smithy/core@3.35.2':
+    dependencies:
+      '@smithy/types': 4.19.0
+      tslib: 2.8.1
+    optional: true
 
   '@smithy/credential-provider-imds@4.5.2':
     dependencies:
@@ -8199,6 +8489,22 @@ snapshots:
   nodemailer@10.0.14: {}
 
   nodemailer@7.0.13: {}
+
+  nostr-tools@2.25.2(typescript@6.0.3):
+    dependencies:
+      '@noble/ciphers': 2.1.1
+      '@noble/curves': 2.0.1
+      '@noble/hashes': 2.0.1
+      '@scure/base': 2.0.0
+      '@scure/bip32': 2.0.1
+      '@scure/bip39': 2.0.1
+      nostr-wasm: 0.1.0
+    optionalDependencies:
+      typescript: 6.0.3
+    optional: true
+
+  nostr-wasm@0.1.0:
+    optional: true
 
   nth-check@2.1.1:
     dependencies:
