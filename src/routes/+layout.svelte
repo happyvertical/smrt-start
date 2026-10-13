@@ -3,7 +3,6 @@ import {
   AssistantDock,
   createAssistantHttpTransport,
 } from '@happyvertical/smrt-chat/svelte';
-import type { User } from '@happyvertical/smrt-svelte';
 import { AppShell } from '@happyvertical/smrt-svelte/app';
 import { CookbookApp } from '@happyvertical/smrt-svelte/cookbook';
 import {
@@ -101,7 +100,7 @@ async function saveEdits(next: Cookbook) {
     runtimeDiagnostics={data.session.authenticated}
     edgeToggles={{ left: true }}
     config={{ left: { initial: 'expanded' } }}
-    user={data.session.user as unknown as User | null}
+    user={data.session.user}
     onSignOut={signOut}
     phoneTabBar
     chrome={!page.route.id?.startsWith('/setup')}
