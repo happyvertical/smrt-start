@@ -3,7 +3,9 @@
 A forkable s-m-r-t application: one owner, local SQLite, a Notes model, an
 in-app assistant, WebMCP for browser agents, and a read-only remote MCP
 endpoint. It is also the proving ground for s-m-r-t's consumer surface
-(happyvertical/smrt#3367).
+(happyvertical/smrt#3367), and the public, canonical app template:
+`smrt cookbook apply` copies this repository by default, so every change here
+ships to new apps.
 
 ## The rule this repository exists for
 
