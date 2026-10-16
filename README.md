@@ -105,10 +105,10 @@ Restart `pnpm dev` after changing `smrt.config.ts`.
 ## Start from a cookbook
 
 `smrt cookbook apply <cookbook.json> <dir>` creates a new app from this
-template (`--template <path|github:happyvertical/smrt-start[#ref]>`). Apply adds
-the packages the cookbook's recipes need to `dependencies` and writes the
-cookbook, verbatim, to `smrt.cookbook.json` at the project root. Nothing else
-changes, and this app does the rest:
+template, its default (`--template <path|github:owner/repo[#ref]>` picks
+another). Apply adds the packages the cookbook's recipes need to
+`dependencies` and writes the cookbook, verbatim, to `smrt.cookbook.json` at
+the project root. Nothing else changes, and this app does the rest:
 
 - **Shell.** With a `smrt.cookbook.json`, the app renders through
   `CookbookApp` (`src/routes/+layout.svelte`): the navigation sections, the
@@ -208,13 +208,21 @@ MCP tokens and the bridge's `--mcp-path` (#3413); the assistant mount's
 defaults (#3414); `AppShell`'s dock registry (#3415); and the runtime-only
 `smrt.ts` (#3416). s-m-r-t 0.55.1 fixed `/mcp` failing every `tools/list` and
 `tools/call` with `Duplicate MCP tool name: agentconfig_list` (#3490), and
-0.55.1 lets the MCP routes take the runtime directly, which removed this
-template's last hand-written MCP wiring (#3491).
+let the MCP routes take the runtime directly, which removed this template's
+last hand-written MCP wiring (#3491). Later releases shipped the cookbook
+intake this list last waited on: the cookbook shell (smrt-svelte `./cookbook`)
+and `smrt cookbook apply`, which copies this template by default
+(smrt-start#4).
 
-Still open on 0.55.1 (the cookbook intake needs the unreleased cookbook shell, smrt-svelte `./cookbook`, and `smrt cookbook apply`; see smrt-start#4):
+Still open on 0.57.2:
 
 - **ChatGPT** needs a hosted profile with public OAuth; this template is
-  local-only.
+  local-only, and smrt-app-mcp validates bearer tokens but is not an OAuth
+  authorization server.
+- **`/api/_resources` is not generated.** The `smrt()` preset checks for
+  `@happyvertical/smrt-users/sveltekit` with CommonJS resolution, which that
+  package's import-only exports refuse, so the build logs `Skipping _resources
+  route` although smrt-users is a dependency (happyvertical/smrt#3913).
 
 ## License
 
