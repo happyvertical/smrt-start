@@ -149,6 +149,44 @@ Try it without publishing anything: `smrt cookbook validate` and `--dry-run`
 print what apply would do, then `pnpm install`, `pnpm app:setup`,
 `pnpm app:doctor` and `pnpm test` run as usual.
 
+### macOS: Git/Xcode setup blocks template fetching
+
+If fetching a `github:` template reports an unaccepted Xcode license or
+missing command-line tools, Git needs host setup. The operator should follow
+[Apple's command-line tools guidance](https://developer.apple.com/xcode/resources/)
+and review any license prompts themselves; the app does not accept licenses
+automatically. GitHub credentials do not resolve this host prerequisite.
+
+Alternatively, use the supported local `--template <path>` option with an
+anonymous public archive. Review the [pinned source revision](https://github.com/happyvertical/smrt-start/commit/0a012d51acbd8df2eb95a1f18a023daf1c13b323)
+and inspect the extracted template before applying it. This example uses that
+full commit ID instead of a moving branch (replace `cookbook.json` and
+`my-app` with your cookbook and a new destination):
+
+```bash
+(
+  set -e
+  revision=0a012d51acbd8df2eb95a1f18a023daf1c13b323
+  template_dir=$(mktemp -d)
+  curl -q --fail --location "https://codeload.github.com/happyvertical/smrt-start/tar.gz/$revision" --output "$template_dir/source.tar.gz"
+  shasum -a 256 "$template_dir/source.tar.gz"
+  mkdir "$template_dir/template"
+  tar -xzf "$template_dir/source.tar.gz" -C "$template_dir/template" --strip-components=1
+  printf 'Inspect the template at %s before running the next command.\n' "$template_dir/template"
+)
+```
+
+Then use the printed path in your existing SMRT CLI environment:
+
+```bash
+smrt cookbook apply cookbook.json my-app --template /printed/path/to/template
+```
+
+The commit ID selects the source revision. The printed SHA-256 is a local
+record of the downloaded bytes, not independent proof of authenticity; GitHub
+archive bytes are not guaranteed to stay identical. This download needs no
+GitHub token or Git/Xcode setup. Remove the temporary directory when finished.
+
 ## Change the data model
 
 Edit or add classes in `src/lib/models/`, then run `pnpm db:migrate`. The
