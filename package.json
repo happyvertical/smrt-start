@@ -19,6 +19,8 @@
     "app:doctor": "smrt app doctor",
     "app:open": "smrt app open",
     "db:migrate": "smrt app build && smrt app migrate",
+    "worker": "smrt app worker task",
+    "worker:schedule": "smrt app worker schedule",
     "typecheck": "svelte-kit sync && tsc --noEmit -p tsconfig.json && svelte-check --tsconfig ./tsconfig.json",
     "test": "vitest run",
     "lint": "biome ci ."
