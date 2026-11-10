@@ -8,7 +8,11 @@ import type { Actions, PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ depends, locals, parent }) => {
   depends('app:notes');
-  if (!locals.user) redirect(303, '/setup');
+  if (!locals.user) {
+    // Local: the one-time owner link. Containers (any other profile): sign in.
+    const profile = process.env.SMRT_RUNTIME_PROFILE ?? 'local';
+    redirect(303, profile === 'local' ? '/setup' : '/sign-in');
+  }
   if (!notesEnabled()) {
     // Without Notes the home page is the cookbook's first section.
     const { cookbookApp } = await parent();

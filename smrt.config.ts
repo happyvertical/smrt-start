@@ -2,18 +2,11 @@ import { defineConfig } from '@happyvertical/smrt-config';
 
 import { modelPackages } from './src/lib/features.ts';
 
-// No `runtime` block by default: the local profile (single owner, SQLite in
-// the OS data directory, loopback only). The container image sets
-// SMRT_RUNTIME_PROFILE=self-hosted, which selects PostgreSQL, public
-// authentication and separate workers (see compose.yaml).
-const profile = process.env.SMRT_RUNTIME_PROFILE as
-  | 'self-hosted'
-  | 'cloud'
-  | undefined;
-
+// No `runtime` block: the profile comes from the environment. Unset it is
+// `local` (single owner, SQLite in the OS data directory, loopback only); the
+// container stack sets SMRT_RUNTIME_PROFILE=self-hosted, which selects
+// PostgreSQL, public authentication and separate workers (see compose.yaml).
 export default defineConfig({
-  ...(profile ? { runtime: { profile } } : {}),
-
   // s-m-r-t packages whose models this app uses. Their tables are migrated
   // with the app's own (`pnpm db:migrate`). The list is every s-m-r-t
   // dependency in package.json that publishes models (see `modelPackages`),

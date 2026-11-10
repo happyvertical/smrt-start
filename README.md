@@ -33,6 +33,34 @@ from this machine, and expires; if it has expired, run `pnpm app:stop`,
 Your data lives in your operating system's application-data directory, never
 in this checkout. `pnpm app:doctor` prints where, plus any problems it finds.
 
+## Run it in containers
+
+```bash
+docker compose up --build   # then open http://localhost:3000/sign-in
+```
+
+This runs the `self-hosted` profile: web, a task worker, a schedule worker, a
+one-shot migration and PostgreSQL, with no setup. `compose.yaml` carries the
+`x-happyvertical` deployment declaration (check it with `pnpm deploy:check`),
+so the same file describes the app to a hosting platform. Plain `pnpm dev` and
+`pnpm app:*` are unchanged: no containers means the `local` profile (SQLite,
+one process).
+
+### Replace before real use
+
+So that `docker compose up` works with nothing configured, the stack ships
+stand-ins. Each is fine for trying the app out and wrong for anything real:
+
+| Stand-in | Default | Replace it by |
+| --- | --- | --- |
+| Sign-in | Email and password (`SMRT_AUTHENTICATION_PROVIDER=password`, `src/lib/server/password-auth.ts`, `src/routes/sign-in`) | Choosing `oidc` or `magic-link` and naming a readiness module in `SMRT_AUTH_READINESS_MODULE` |
+| Owner account | `owner@example.com` / `change-this-stand-in-password`, created by `scripts/provision-owner.mjs` | Setting `SMRT_OWNER_EMAIL` and `SMRT_OWNER_PASSWORD` before the first `up`, or changing the password and deleting that step |
+| Asset store | A directory on the `assets` volume (`SMRT_ASSETS_PROVIDER=local-files`, `SMRT_ASSETS_DIR`) | `s3-compatible` with `SMRT_ASSETS_READINESS_MODULE` |
+| Secret store | The process environment (`SMRT_SECRETS_PROVIDER=environment`; list required names in `SMRT_SECRETS_REQUIRED`) | `external` with `SMRT_SECRETS_READINESS_MODULE` |
+| PostgreSQL | The `database` service, password `smrt-start-stand-in` | A managed database: set `DATABASE_URL`, drop the service |
+
+Put overrides in an ignored `.env` file; Compose reads it.
+
 ## Use it
 
 - **Notes.** Add notes on the home page.
@@ -206,6 +234,8 @@ are gitignored).
 | `pnpm app:open` | Open the app (or the pending owner invitation) |
 | `pnpm app:recover` | Replace an expired, unclaimed owner invitation |
 | `pnpm app:doctor` | Secret-free diagnostics and recovery steps |
+| `pnpm deploy:check` | Validate the `x-happyvertical` declaration in `compose.yaml` |
+| `pnpm provision:owner` | Create the stand-in owner (container stack) |
 | `pnpm db:migrate` | Rebuild, then apply schema changes |
 | `pnpm typecheck` | `tsc` and `svelte-check` |
 | `pnpm test` | Vitest |
@@ -227,6 +257,8 @@ s-m-r-t change named next to it ships, or is marked as staying.
 | `src/routes/api/_runtime/health/+server.ts`, `diagnostics/+server.ts` | Mount the health and diagnostics handlers | Same as above |
 | `src/routes/.well-known/oauth-protected-resource/mcp/+server.ts` | RFC 9728 metadata for hosted bearer challenges; 404 in the local profile | Not filed: only a hosted profile uses it; revisit with happyvertical/smrt#3378 |
 | `src/lib/features.ts`, `smrt.config.ts` (`modelPackages`) | The Notes switch, the cookbook file check and the model-package list read from `package.json` | The package list: not filed (smrt-start#4); `consumer.packages` from the dependencies a cookbook adds, or written by `apply` |
+| `Dockerfile`, `compose.yaml`, `.dockerignore`, `scripts/provision-owner.mjs` | The container stack and its stand-in owner | Not filed: hosting is Epic F (happyvertical/happyvertical.com#498); the owner step goes when sign-in moves to a real provider |
+| `src/lib/server/password-auth.ts`, `src/routes/auth/password/+server.ts`, `src/routes/sign-in/+page.svelte` | Stand-in email and password sign-in for the container profile | Replace with your provider (see "Replace before real use") |
 | `src/lib/server/cookbook.ts`, `src/routes/api/cookbook/preferences/+server.ts` | Lays the stored overview and shell-layout preferences over `smrt.cookbook.json` and stores edits | Not filed (smrt-start#4): a smrt-preferences adapter for `CookbookApp`, so the shell persists its own edits |
 | `src/lib/cookbook/exports.ts` | The static map that resolves recipe exports to components | Not a gap: a bundler needs a static list; only the packages the app depends on can be listed |
 | `src/lib/rest-source.ts`, `src/routes/m/[pkg]/[model]/[[key]]/`, `src/routes/s/[slug]/` | The entry and section pages of the cookbook shell | Not a gap: the `smrt()` preset hosts the cookbook's package models over `/api/<collection>` and `@smrt/web` carries their definitions; these pages are the app's routes over them |
