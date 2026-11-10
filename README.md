@@ -59,7 +59,10 @@ stand-ins. Each is fine for trying the app out and wrong for anything real:
 | Secret store | The process environment (`SMRT_SECRETS_PROVIDER=environment`; list required names in `SMRT_SECRETS_REQUIRED`) | `external` with `SMRT_SECRETS_READINESS_MODULE` |
 | PostgreSQL | The `database` service, password `smrt-start-stand-in` | A managed database: set `DATABASE_URL`, drop the service |
 
-Put overrides in an ignored `.env` file; Compose reads it.
+Put overrides in an ignored `.env` file; Compose reads it. The stand-in owner is
+created once and is not changed by later runs: when you switch the sign-in
+provider (which also closes `POST /auth/password`), delete that account or
+change its password, or the published default stays valid in the database.
 
 ## Use it
 

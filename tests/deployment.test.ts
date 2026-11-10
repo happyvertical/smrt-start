@@ -67,6 +67,15 @@ describe('deployment declaration (x-happyvertical)', () => {
     expect(dockerfile).toContain('ENV COREPACK_HOME=');
   });
 
+  it('closes the stand-in sign-in route unless password sign-in is selected', () => {
+    expect(
+      readFileSync('src/routes/auth/password/+server.ts', 'utf8'),
+    ).toContain("SMRT_AUTHENTICATION_PROVIDER !== 'password'");
+    expect(readFileSync('scripts/provision-owner.mjs', 'utf8')).toContain(
+      "SMRT_AUTHENTICATION_PROVIDER !== 'password'",
+    );
+  });
+
   it('is checked in CI', () => {
     expect(ci).toContain('pnpm deploy:check');
   });

@@ -5,6 +5,11 @@
 import { provisionPasswordOwner } from '@happyvertical/smrt-users/operator';
 import { getDatabase } from '@happyvertical/sql';
 
+if (process.env.SMRT_AUTHENTICATION_PROVIDER !== 'password') {
+  console.log('password sign-in is not selected: no stand-in owner created');
+  process.exit(0);
+}
+
 const email = process.env.SMRT_OWNER_EMAIL || 'owner@example.com';
 const password = process.env.SMRT_OWNER_PASSWORD || 'change-this-stand-in-password';
 const db = await getDatabase({
