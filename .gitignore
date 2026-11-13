@@ -18,6 +18,7 @@ src/lib/types/smrt-generated/
 # BEGIN SMRT auto-generated routes (Vite plugin)
 src/routes/api/_changes/+server.ts
 src/routes/api/_events/+server.ts
+src/routes/api/_resources/+server.ts
 src/routes/api/notes/\[id\]/+server.ts
 src/routes/api/notes/+server.ts
 src/routes/api/sync/apply/+server.ts
