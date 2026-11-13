@@ -1,3 +1,4 @@
+// TEMPORARY: replace with `smrt users:provision-owner` once happyvertical/smrt#4961 lands.
 // Creates the stand-in owner for the container stack (idempotent: a second run
 // reports `unchanged`). The defaults below exist so `docker compose up` gives
 // you something to sign in with; set SMRT_OWNER_EMAIL and SMRT_OWNER_PASSWORD
