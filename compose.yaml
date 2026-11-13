@@ -99,7 +99,10 @@ services:
     build:
       context: .
       target: build
-    environment: *runtime-environment
+    environment:
+      <<: *runtime-environment
+      SMRT_OWNER_EMAIL: ${SMRT_OWNER_EMAIL:-}
+      SMRT_OWNER_PASSWORD: ${SMRT_OWNER_PASSWORD:-}
     command: sh -c "pnpm app:setup && pnpm provision:owner"
     depends_on:
       database:

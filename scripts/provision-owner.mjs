@@ -10,8 +10,8 @@ if (process.env.SMRT_AUTHENTICATION_PROVIDER !== 'password') {
   process.exit(0);
 }
 
-const email = process.env.SMRT_OWNER_EMAIL || 'owner@example.com';
-const password = process.env.SMRT_OWNER_PASSWORD || 'change-this-stand-in-password';
+const email = process.env.SMRT_OWNER_EMAIL?.trim() || 'owner@example.com';
+const password = process.env.SMRT_OWNER_PASSWORD?.trim() || 'change-this-stand-in-password';
 const db = await getDatabase({
   type: 'postgres',
   url: process.env.DATABASE_URL,
